@@ -1,0 +1,149 @@
+{
+ "slug": "landing",
+ "title": "DurdenVPN",
+ "subtitle": "Переходи к нам!",
+ "features": [],
+ "footer_text": "<!-- DURDENVPN FOOTER -->\n<footer class=\"durden-footer\">\n    <div class=\"durden-footer__glow\"></div>\n\n    <div class=\"durden-footer__inner\">\n\n        <!-- TOP -->\n        <div class=\"durden-footer__top\">\n\n            <div class=\"durden-footer__brand\">\n                <div class=\"durden-footer__logo\">\n                    DURDEN<span>VPN</span>\n                </div>\n\n                <p class=\"durden-footer__tagline\">\n                    Fast. Stable. No bullshit.\n                </p>\n\n                <p class=\"durden-footer__description\">\n                    Забудь о медленном интернете, ограничениях и лишнем шуме.\n                    DurdenVPN создан для тех, кому нужен быстрый и стабильный доступ\n                    без компромиссов.\n                </p>\n            </div>\n\n\n            <div class=\"durden-footer__links\">\n\n                <div class=\"durden-footer__column\">\n                    <div class=\"durden-footer__title\">\n                        NAVIGATION\n                    </div>\n\n                    <a href=\"/buy/landing\">Купить VPN</a>\n                    <a href=\"/login\">Личный кабинет</a>\n                    <a href=\"/\">Главная</a>\n                </div>\n\n\n                <div class=\"durden-footer__column\">\n                    <div class=\"durden-footer__title\">\n                        INFORMATION\n                    </div>\n\n                    <a href=\"/privacy\">Политика конфиденциальности</a>\n                    <a href=\"/refund\">Возврат средств</a>\n                    <a href=\"/terms\">Пользовательское соглашение</a>\n                </div>\n\n\n                <div class=\"durden-footer__column\">\n                    <div class=\"durden-footer__title\">\n                        CONTACT\n                    </div>\n\n                    <a href=\"https://t.me/durdenvpn\" target=\"_blank\">\n                        Telegram\n                    </a>\n\n                    <a href=\"mailto:support@durdenvpn.org\">\n                        Поддержка\n                    </a>\n                </div>\n\n            </div>\n        </div>\n\n\n        <!-- WARNING -->\n        <div class=\"durden-footer__warning\">\n\n            <div class=\"durden-footer__warning-icon\">\n                !\n            </div>\n\n            <div>\n                <div class=\"durden-footer__warning-title\">\n                    USE AT YOUR OWN RISK\n                </div>\n\n                <div class=\"durden-footer__warning-text\">\n                    Используя сервис DurdenVPN, вы соглашаетесь с условиями\n                    использования сервиса и принимаете ответственность за свои действия.\n                </div>\n            </div>\n\n        </div>\n\n\n        <!-- DIVIDER -->\n        <div class=\"durden-footer__divider\"></div>\n\n\n        <!-- BOTTOM -->\n        <div class=\"durden-footer__bottom\">\n\n            <div class=\"durden-footer__copy\">\n                © 2026 DURDENVPN. ALL RIGHTS RESERVED.\n            </div>\n\n            <div class=\"durden-footer__status\">\n                <span class=\"durden-footer__status-dot\"></span>\n                ALL SYSTEMS OPERATIONAL\n            </div>\n\n        </div>\n\n    </div>\n</footer>",
+ "tariffs": [
+  {
+   "id": 5,
+   "name": "👊Белый интернет+Обычный👊",
+   "description": "👊Обычный VPN и Белый интернет 👊\n1000 ГБ Обычного VPN💥\n100 ГБ Белого интернета👾",
+   "traffic_limit_gb": 1000,
+   "device_limit": 3,
+   "tier_level": 3,
+   "periods": [
+    {
+     "days": 30,
+     "label": "1 month",
+     "price_kopeks": 29900,
+     "price_label": "299 ₽",
+     "original_price_kopeks": null,
+     "original_price_label": null,
+     "discount_percent": null
+    },
+    {
+     "days": 60,
+     "label": "2 months",
+     "price_kopeks": 59900,
+     "price_label": "599 ₽",
+     "original_price_kopeks": null,
+     "original_price_label": null,
+     "discount_percent": null
+    },
+    {
+     "days": 90,
+     "label": "3 months",
+     "price_kopeks": 89900,
+     "price_label": "899 ₽",
+     "original_price_kopeks": null,
+     "original_price_label": null,
+     "discount_percent": null
+    },
+    {
+     "days": 360,
+     "label": "12 mo.",
+     "price_kopeks": 349900,
+     "price_label": "3499 ₽",
+     "original_price_kopeks": null,
+     "original_price_label": null,
+     "discount_percent": null
+    }
+   ],
+   "is_daily": false,
+   "daily_price_kopeks": 0
+  },
+  {
+   "id": 2,
+   "name": "📦Обычный📦",
+   "description": "Обычный VPN🛰️",
+   "traffic_limit_gb": 1000,
+   "device_limit": 3,
+   "tier_level": 1,
+   "periods": [
+    {
+     "days": 30,
+     "label": "1 month",
+     "price_kopeks": 9900,
+     "price_label": "99 ₽",
+     "original_price_kopeks": null,
+     "original_price_label": null,
+     "discount_percent": null
+    },
+    {
+     "days": 60,
+     "label": "2 months",
+     "price_kopeks": 19900,
+     "price_label": "199 ₽",
+     "original_price_kopeks": null,
+     "original_price_label": null,
+     "discount_percent": null
+    },
+    {
+     "days": 90,
+     "label": "3 months",
+     "price_kopeks": 29900,
+     "price_label": "299 ₽",
+     "original_price_kopeks": null,
+     "original_price_label": null,
+     "discount_percent": null
+    },
+    {
+     "days": 360,
+     "label": "12 mo.",
+     "price_kopeks": 119900,
+     "price_label": "1199 ₽",
+     "original_price_kopeks": null,
+     "original_price_label": null,
+     "discount_percent": null
+    }
+   ],
+   "is_daily": false,
+   "daily_price_kopeks": 0
+  }
+ ],
+ "payment_methods": [
+  {
+   "method_id": "lava",
+   "display_name": "Lava🔥",
+   "description": null,
+   "icon_url": null,
+   "sort_order": 0,
+   "min_amount_kopeks": 10000,
+   "max_amount_kopeks": null,
+   "currency": null,
+   "sub_options": [
+    {
+     "id": "card",
+     "name": "Карта"
+    },
+    {
+     "id": "sbp",
+     "name": "СБП"
+    }
+   ]
+  },
+  {
+   "method_id": "heleket",
+   "display_name": "♠️Heleket (Крипта)",
+   "description": null,
+   "icon_url": null,
+   "sort_order": 1,
+   "min_amount_kopeks": 5000,
+   "max_amount_kopeks": null,
+   "currency": null,
+   "sub_options": null
+  }
+ ],
+ "gift_enabled": false,
+ "custom_css": "/* =========================================================\n   DURDENVPN FOOTER\n   ========================================================= */\n\n.durden-footer {\n    position: relative;\n    width: 100%;\n    overflow: hidden;\n\n    background:\n        radial-gradient(\n            circle at 85% 20%,\n            rgba(180, 0, 0, 0.08),\n            transparent 32%\n        ),\n        #080808;\n\n    border-top: 1px solid rgba(255, 255, 255, 0.08);\n\n    color: #ffffff;\n\n    font-family:\n        Inter,\n        Arial,\n        Helvetica,\n        sans-serif;\n\n    margin-top: 80px;\n}\n\n\n/* subtle red glow */\n\n.durden-footer__glow {\n    position: absolute;\n\n    width: 500px;\n    height: 500px;\n\n    right: -250px;\n    top: -250px;\n\n    background: rgba(180, 0, 0, 0.08);\n\n    filter: blur(100px);\n\n    pointer-events: none;\n}\n\n\n/* main container */\n\n.durden-footer__inner {\n    position: relative;\n\n    max-width: 1280px;\n\n    margin: 0 auto;\n\n    padding:\n        70px 32px 30px;\n}\n\n\n/* =========================================================\n   TOP SECTION\n   ========================================================= */\n\n.durden-footer__top {\n    display: flex;\n\n    justify-content: space-between;\n\n    gap: 80px;\n\n    padding-bottom: 55px;\n}\n\n\n/* =========================================================\n   BRAND\n   ========================================================= */\n\n.durden-footer__brand {\n    max-width: 430px;\n}\n\n\n.durden-footer__logo {\n    font-size: 30px;\n\n    font-weight: 900;\n\n    letter-spacing: -1.5px;\n\n    line-height: 1;\n\n    color: #ffffff;\n}\n\n\n.durden-footer__logo span {\n    color: #d40000;\n}\n\n\n.durden-footer__tagline {\n    margin-top: 14px;\n\n    margin-bottom: 18px;\n\n    color: #d40000;\n\n    font-size: 12px;\n\n    font-weight: 800;\n\n    letter-spacing: 2px;\n\n    text-transform: uppercase;\n}\n\n\n.durden-footer__description {\n    margin: 0;\n\n    max-width: 410px;\n\n    color: #777777;\n\n    font-size: 14px;\n\n    line-height: 1.7;\n}\n\n\n/* =========================================================\n   LINKS\n   ========================================================= */\n\n.durden-footer__links {\n    display: flex;\n\n    gap: 75px;\n}\n\n\n.durden-footer__column {\n    display: flex;\n\n    flex-direction: column;\n\n    gap: 12px;\n\n    min-width: 150px;\n}\n\n\n.durden-footer__title {\n    margin-bottom: 8px;\n\n    color: #ffffff;\n\n    font-size: 11px;\n\n    font-weight: 800;\n\n    letter-spacing: 2px;\n\n    text-transform: uppercase;\n}\n\n\n.durden-footer__column a {\n    position: relative;\n\n    width: fit-content;\n\n    color: #686868;\n\n    text-decoration: none;\n\n    font-size: 13px;\n\n    transition:\n        color 0.2s ease,\n        transform 0.2s ease;\n}\n\n\n.durden-footer__column a::before {\n    content: \"\";\n\n    position: absolute;\n\n    left: 0;\n    bottom: -3px;\n\n    width: 0;\n    height: 1px;\n\n    background: #d40000;\n\n    transition: width 0.2s ease;\n}\n\n\n.durden-footer__column a:hover {\n    color: #ffffff;\n\n    transform: translateX(3px);\n}\n\n\n.durden-footer__column a:hover::before {\n    width: 100%;\n}\n\n\n/* =========================================================\n   WARNING\n   ========================================================= */\n\n.durden-footer__warning {\n    display: flex;\n\n    align-items: flex-start;\n\n    gap: 16px;\n\n    padding: 18px 20px;\n\n    border: 1px solid rgba(212, 0, 0, 0.2);\n\n    background:\n        linear-gradient(\n            90deg,\n            rgba(212, 0, 0, 0.07),\n            rgba(212, 0, 0, 0.015)\n        );\n}\n\n\n.durden-footer__warning-icon {\n    display: flex;\n\n    flex-shrink: 0;\n\n    align-items: center;\n    justify-content: center;\n\n    width: 28px;\n    height: 28px;\n\n    border: 1px solid #d40000;\n\n    color: #d40000;\n\n    font-size: 14px;\n\n    font-weight: 900;\n}\n\n\n.durden-footer__warning-title {\n    margin-bottom: 5px;\n\n    color: #ffffff;\n\n    font-size: 11px;\n\n    font-weight: 900;\n\n    letter-spacing: 2px;\n}\n\n\n.durden-footer__warning-text {\n    color: #666666;\n\n    font-size: 12px;\n\n    line-height: 1.6;\n}\n\n\n/* =========================================================\n   DIVIDER\n   ========================================================= */\n\n.durden-footer__divider {\n    width: 100%;\n\n    height: 1px;\n\n    margin-top: 35px;\n\n    background:\n        linear-gradient(\n            90deg,\n            transparent,\n            rgba(255, 255, 255, 0.12),\n            transparent\n        );\n}\n\n\n/* =========================================================\n   BOTTOM\n   ========================================================= */\n\n.durden-footer__bottom {\n    display: flex;\n\n    align-items: center;\n\n    justify-content: space-between;\n\n    gap: 20px;\n\n    padding-top: 25px;\n}\n\n\n.durden-footer__copy {\n    color: #444444;\n\n    font-size: 10px;\n\n    font-weight: 700;\n\n    letter-spacing: 1.5px;\n}\n\n\n/* system status */\n\n.durden-footer__status {\n    display: flex;\n\n    align-items: center;\n\n    gap: 8px;\n\n    color: #555555;\n\n    font-size: 10px;\n\n    font-weight: 700;\n\n    letter-spacing: 1.3px;\n}\n\n\n.durden-footer__status-dot {\n    width: 6px;\n    height: 6px;\n\n    border-radius: 50%;\n\n    background: #45c96b;\n\n    box-shadow:\n        0 0 8px rgba(69, 201, 107, 0.7);\n}\n\n\n/* =========================================================\n   MOBILE\n   ========================================================= */\n\n@media (max-width: 900px) {\n\n    .durden-footer__top {\n        flex-direction: column;\n\n        gap: 45px;\n    }\n\n\n    .durden-footer__links {\n        display: grid;\n\n        grid-template-columns:\n            repeat(3, 1fr);\n\n        gap: 30px;\n    }\n\n}\n\n\n@media (max-width: 600px) {\n\n    .durden-footer {\n        margin-top: 50px;\n    }\n\n\n    .durden-footer__inner {\n        padding:\n            50px 20px 25px;\n    }\n\n\n    .durden-footer__links {\n        grid-template-columns: 1fr 1fr;\n\n        gap: 35px 20px;\n    }\n\n\n    .durden-footer__warning {\n        padding: 15px;\n    }\n\n\n    .durden-footer__bottom {\n        flex-direction: column;\n\n        align-items: flex-start;\n    }\n\n\n    .durden-footer__status {\n        margin-top: 3px;\n    }\n\n}\n\n\n@media (max-width: 400px) {\n\n    .durden-footer__links {\n        grid-template-columns: 1fr;\n    }\n\n}",
+ "meta_title": "DurdenVPN — VPN без ограничений, оплата картой и СБП",
+ "meta_description": "Подключение за минуту: выберите тариф, оплатите картой, СБП или криптой — ссылка придёт на email или в Telegram. 1000 ГБ, 3 устройства, от 1 до 12 месяцев.",
+ "discount": null,
+ "background_config": null,
+ "sticky_pay_button": false,
+ "analytics_view_enabled": true,
+ "analytics_view_goal": "landing_view",
+ "analytics_click_enabled": true,
+ "analytics_click_goal": "landing_pay"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "durdenvpn-landing",
+  "private": true,
+  "description": "Fast standalone purchase landing for DurdenVPN (/buy/landing)",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/landing.test.mjs",
+    "snapshot": "node scripts/update-snapshot.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1"
+  }
+}

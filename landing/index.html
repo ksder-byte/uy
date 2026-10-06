@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DurdenVPN — VPN без ограничений, оплата картой и СБП</title>
+<meta name="description" content="Подключение за минуту: выберите тариф, оплатите картой, СБП или криптой — ссылка придёт на email или в Telegram. 1000 ГБ, 3 устройства, от 1 до 12 месяцев.">
+<link rel="canonical" href="https://www.durdenvpn.org/buy/landing">
+<meta name="theme-color" content="#1c1c1c">
+<meta name="color-scheme" content="dark">
+<meta name="format-detection" content="telephone=no">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="application-name" content="DurdenVPN">
+<meta name="apple-mobile-web-app-title" content="DurdenVPN">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DurdenVPN">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://www.durdenvpn.org/buy/landing">
+<meta property="og:title" content="DurdenVPN — VPN без ограничений, оплата картой и СБП">
+<meta property="og:description" content="VPN без регистрации: ключ на email или в Telegram сразу после оплаты. Карта, СБП, крипта.">
+<meta property="og:image" content="https://www.durdenvpn.org/lp/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/lp/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/lp/apple-touch-icon.png">
+<!--lp:verification-->
+
+<!--/lp:verification-->
+<style>
+:root{--bg:#1c1c1c;--tile:#0d0d0d;--surface:#121212;--surface-2:#1a1a1a;--surface-3:#262626;--line:#2b2b2b;--line-2:#3d3d3d;--text:#f5f5f5;--muted:#b0b0b0;--dim:#8f8f8f;--accent:#fff;--on-accent:#0b0b0b;--danger:#ff7b7b;--ok:#45c96b;--red:#e01b1b;--radius:4px;--wrap:1120px;--font:Roboto,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,system-ui,sans-serif;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:16px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg) radial-gradient(rgba(255,255,255,.055) 1px,transparent 1.5px) 0 0/20px 20px;color:var(--text);font:400 16px/1.55 var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button,input,textarea{font:inherit;color:inherit}
+h1,h2,h3,p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 16px}
+@media (min-width:640px){.wrap{padding:0 24px}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:8px;top:-60px;z-index:100;background:var(--accent);color:var(--on-accent);padding:10px 14px;font-weight:700;text-decoration:none}
+.skip:focus{top:8px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
+.h2{font-size:clamp(34px,6vw,56px);font-weight:900;line-height:1.02;letter-spacing:-.035em}
+.lead{color:var(--muted);font-size:17px;margin-top:14px;max-width:640px}
+.section{padding:72px 0 0}
+@media (min-width:900px){.section{padding-top:104px}}
+
+/* header */
+.top{display:flex;align-items:center;gap:10px;padding:16px 0}
+@media (min-width:480px){.top{gap:16px}}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.logo img{width:44px;height:44px;border-radius:2px;background:#000}
+.logo b{display:none;font-size:13px;font-weight:700;letter-spacing:.2em}
+@media (min-width:420px){.logo b{display:inline}}
+.nav{display:none;gap:24px;font-size:14px}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--text)}
+@media (min-width:760px){.nav{display:flex}}
+.login{font-size:14px;font-weight:600;text-decoration:none;border:1px solid var(--line-2);padding:8px 14px}
+.login:hover{border-color:var(--text)}
+.lang{display:flex;border:1px solid var(--line-2)}
+.lang button{background:none;border:0;padding:8px 10px;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--dim);cursor:pointer;min-width:40px}
+.lang button[aria-pressed=true]{background:var(--accent);color:var(--on-accent)}
+
+/* hero */
+.hero{position:relative;isolation:isolate;padding:40px 0 8px;overflow:hidden;margin:0 -16px;padding-left:16px;padding-right:16px}
+@media (min-width:640px){.hero{margin:0 -24px;padding-left:24px;padding-right:24px}}
+.hero::before{content:"";position:absolute;z-index:-1;right:-140px;top:-80px;width:min(640px,120vw);aspect-ratio:1;background:radial-gradient(circle,rgba(255,255,255,.55) 0 2.6px,transparent 3.2px) 0 0/16px 16px;-webkit-mask:radial-gradient(circle at 55% 45%,#000 0,rgba(0,0,0,.6) 32%,transparent 66%);mask:radial-gradient(circle at 55% 45%,#000 0,rgba(0,0,0,.6) 32%,transparent 66%);pointer-events:none}
+.hero h1{font-weight:900;letter-spacing:-.06em;line-height:.86}
+.hero h1 .xl{display:block;font-size:clamp(40px,12.8vw,148px)}
+.hero h1 .sub{display:block;margin-top:22px;font-size:clamp(22px,3.4vw,34px);letter-spacing:-.02em;line-height:1.15;font-weight:800;max-width:720px}
+.hero .lead{font-size:clamp(17px,2vw,19px)}
+.hero .tag{color:var(--dim);margin-top:8px}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 28px;border:0;border-radius:0;background:var(--accent);color:var(--on-accent);font-size:14px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform .15s,opacity .15s}
+.btn:hover{opacity:.9}
+.btn:active{transform:translateY(1px)}
+.btn[disabled]{opacity:.55;cursor:progress}
+.price-note b{display:block;font-size:26px;font-weight:900;letter-spacing:-.02em;line-height:1.1}
+.price-note>span{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:48px;padding:0;list-style:none}
+@media (min-width:800px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--tile);border:1px solid #1f1f1f;padding:28px 20px 22px;min-height:132px;display:flex;flex-direction:column;justify-content:flex-end}
+.stat b{font-size:clamp(34px,5vw,44px);font-weight:900;letter-spacing:-.04em;line-height:1}
+.stat b small{font-size:.42em;letter-spacing:0;margin:0 2px}
+.stat>span{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+
+/* advantages */
+.grid3{display:grid;gap:10px;margin-top:32px;padding:0;list-style:none}
+@media (min-width:640px){.grid3{grid-template-columns:1fr 1fr}}
+@media (min-width:960px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--tile);border:1px solid #1f1f1f;padding:22px}
+.card .ic{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--line-2);margin-bottom:22px}
+.card .ic svg{width:18px;height:18px}
+.card h3{font-size:19px;font-weight:800;letter-spacing:-.01em}
+.card p{margin-top:8px;color:var(--muted);font-size:15px}
+
+/* steps */
+.steps3{display:grid;gap:28px;margin-top:36px;padding:0;list-style:none;counter-reset:s}
+@media (min-width:800px){.steps3{grid-template-columns:repeat(3,1fr);background:linear-gradient(var(--line-2),var(--line-2)) 0 46px/100% 1px no-repeat}}
+.steps3 li{counter-increment:s}
+.steps3 li::before{content:"0" counter(s);display:inline-block;padding-right:16px;background:var(--bg);font-size:64px;font-weight:900;letter-spacing:-.06em;line-height:92px;color:transparent;-webkit-text-stroke:1.5px #9a9a9a}
+.steps3 h3{font-size:19px;font-weight:800;margin-top:10px}
+.steps3 p{color:var(--muted);font-size:15px;margin-top:6px;max-width:300px}
+
+/* checkout */
+.discount{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:28px;padding:16px 18px;border:1px solid var(--line-2);background:linear-gradient(90deg,rgba(255,255,255,.08),transparent)}
+.discount .pct{background:var(--accent);color:var(--on-accent);font-weight:900;padding:4px 10px;margin-right:10px}
+.discount time{font-variant-numeric:tabular-nums;font-weight:800;font-size:18px}
+.checkout{display:grid;gap:28px;margin-top:32px}
+@media (min-width:1024px){.checkout{grid-template-columns:minmax(0,1fr) 360px;gap:32px;align-items:start}}
+.step{border:0;margin:0 0 28px;padding:0;min-width:0}
+.step:last-child{margin-bottom:0}
+.step>legend,.step>.legend{display:flex;align-items:center;gap:10px;padding:0;margin-bottom:14px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.n{display:inline-grid;place-items:center;width:24px;height:24px;border:1px solid var(--line-2);font-size:12px;letter-spacing:0;color:var(--text)}
+.opt{position:relative;display:block;cursor:pointer}
+.opt input{position:absolute;opacity:0;width:1px;height:1px}
+.box{display:block;height:100%;background:var(--surface-2);border:1px solid var(--line);padding:18px;transition:border-color .15s,background .15s}
+.opt:hover .box{border-color:var(--line-2)}
+.opt input:focus-visible+.box{outline:2px solid var(--accent);outline-offset:2px}
+.opt input:checked+.box{border-color:var(--accent);background:var(--surface-3)}
+.opt input:disabled+.box{opacity:.45;cursor:not-allowed}
+.dot{position:absolute;right:16px;top:18px;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line-2)}
+.opt input:checked+.box .dot{border:6px solid var(--accent)}
+.tariffs{display:grid;gap:10px}
+@media (min-width:640px){.tariffs{grid-template-columns:1fr 1fr}}
+.t-name{display:block;font-size:18px;font-weight:800;line-height:1.25;padding-right:32px}
+.t-desc{list-style:none;padding:0;margin:8px 0 0;color:var(--muted);font-size:14px}
+.t-desc li+li{margin-top:2px}
+.t-feat{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;font-size:13px;color:var(--muted)}
+.t-feat span::before{content:"";display:inline-block;width:6px;height:6px;margin-right:7px;background:var(--text);vertical-align:2px}
+.t-price{display:block;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:22px;font-weight:900;letter-spacing:-.02em}
+.t-price small{font-size:13px;font-weight:600;color:var(--dim);letter-spacing:0}
+.badge{display:inline-block;margin-left:8px;padding:2px 7px;background:var(--accent);color:var(--on-accent);font-size:11px;font-weight:900;letter-spacing:.06em;vertical-align:3px}
+.periods{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.periods .box{padding:12px 14px}
+.p-label{display:block;font-weight:700}
+.p-price{display:block;margin-top:2px;font-size:14px;color:var(--muted)}
+.p-price s{color:var(--dim);margin-right:4px}
+.methods{display:grid;gap:8px}
+@media (min-width:640px){.methods{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}}
+.methods .box{display:flex;align-items:center;gap:12px;padding:14px 16px}
+.m-ic{width:22px;height:22px;flex:none}
+.m-label{display:block;font-weight:700}
+.m-cap{display:block;font-size:12px;color:var(--dim)}
+.methods .dot{position:static;margin-left:auto;flex:none}
+.field{display:block;width:100%;min-height:54px;padding:14px 16px;background:var(--surface);border:1px solid var(--line-2);border-radius:0;font-size:17px;outline:none}
+.field:focus{border-color:var(--accent)}
+.field[aria-invalid=true]{border-color:var(--danger)}
+.field::placeholder{color:#6f6f6f}
+textarea.field{min-height:84px;resize:vertical}
+.hint{margin-top:8px;font-size:13px;color:var(--dim)}
+.err{margin-top:8px;font-size:14px;color:var(--danger)}
+.seg{display:inline-flex;border:1px solid var(--line-2);margin-bottom:14px}
+.seg label{cursor:pointer}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg span{display:block;padding:9px 16px;font-size:14px;font-weight:700;color:var(--muted)}
+.seg input:checked+span{background:var(--accent);color:var(--on-accent)}
+.seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.gift-fields{display:grid;gap:10px}
+.summary{background:var(--surface);border:1px solid var(--line);padding:22px}
+@media (min-width:1024px){.summary{position:sticky;top:20px}}
+.summary h3{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.summary dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:15px}
+.summary dt{color:var(--dim)}
+.summary dd{margin:0;text-align:right;font-weight:600;overflow-wrap:anywhere}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0;padding-top:16px;border-top:1px solid var(--line)}
+.total span{color:var(--dim);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.total b{font-size:32px;font-weight:900;letter-spacing:-.03em}
+.total s{font-size:16px;color:var(--dim);margin-right:8px;font-weight:600}
+.btn-pay{width:100%;min-height:58px;font-size:15px;letter-spacing:.08em}
+.legal{margin-top:12px;font-size:12px;color:var(--dim);line-height:1.5}
+.legal a{color:var(--muted)}
+.assure{list-style:none;padding:16px 0 0;margin:16px 0 0;border-top:1px solid var(--line);display:grid;gap:8px;font-size:14px;color:var(--muted)}
+.assure li{display:flex;gap:10px;align-items:baseline}
+.assure li::before{content:"";flex:none;width:8px;height:8px;background:var(--ok);transform:translateY(-1px)}
+.noscript{margin-top:24px;padding:16px;border:1px solid var(--line-2)}
+
+/* faq */
+.faq{margin-top:28px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:20px 0;font-size:18px;font-weight:700;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:28px;font-weight:300;line-height:1;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--muted);max-width:760px}
+.faq a{color:var(--text)}
+
+/* final */
+.final{position:relative;overflow:hidden;margin-top:72px;background:#fff;color:#0b0b0b;padding:44px 24px}
+@media (min-width:768px){.final{padding:64px 56px}}
+.final::after{content:"";position:absolute;right:-80px;bottom:-120px;width:420px;aspect-ratio:1;background:radial-gradient(circle,rgba(0,0,0,.16) 0 2.6px,transparent 3.2px) 0 0/16px 16px;-webkit-mask:radial-gradient(circle,#000 0,transparent 66%);mask:radial-gradient(circle,#000 0,transparent 66%);pointer-events:none}
+.final .kicker{color:#6b6b6b}
+.final .lead{color:#4a4a4a}
+.final .btn{background:#141414;color:#fff;margin-top:28px;position:relative;z-index:1}
+
+/* footer (operator design, restored) */
+.foot{position:relative;overflow:hidden;margin-top:88px;background:radial-gradient(circle at 85% 20%,rgba(180,0,0,.08),transparent 32%),#080808;border-top:1px solid rgba(255,255,255,.08)}
+.foot-in{max-width:1280px;margin:0 auto;padding:56px 20px 28px}
+@media (min-width:640px){.foot-in{padding:70px 32px 30px}}
+.foot-top{display:flex;flex-direction:column;gap:44px;padding-bottom:48px}
+@media (min-width:900px){.foot-top{flex-direction:row;justify-content:space-between;gap:80px}}
+.foot-logo{font-size:30px;font-weight:900;letter-spacing:-1.5px;line-height:1}
+.foot-logo span{color:var(--red)}
+.foot-tagline{margin:14px 0 18px;color:var(--red);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.foot-desc{max-width:410px;color:#8c8c8c;font-size:14px;line-height:1.7}
+.foot-links{display:grid;grid-template-columns:1fr 1fr;gap:32px 20px}
+@media (min-width:600px){.foot-links{grid-template-columns:repeat(3,minmax(150px,auto));gap:30px 60px}}
+.foot-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.foot-title{margin-bottom:6px;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.foot-col a{color:#9a9a9a;text-decoration:none;font-size:14px;background:linear-gradient(var(--red),var(--red)) 0 100%/0 1px no-repeat;transition:color .2s,background-size .2s;padding-bottom:2px}
+.foot-col a:hover{color:#fff;background-size:100% 1px}
+.foot-warn{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;border:1px solid rgba(224,27,27,.25);background:linear-gradient(90deg,rgba(224,27,27,.08),rgba(224,27,27,.015))}
+.foot-warn i{flex:none;display:grid;place-items:center;width:28px;height:28px;border:1px solid var(--red);color:var(--red);font-style:normal;font-weight:900}
+.foot-warn b{display:block;margin-bottom:4px;font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+.foot-warn p{color:#8c8c8c;font-size:13px;line-height:1.6}
+.foot-warn a{color:#bdbdbd}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 20px;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);color:#7a7a7a;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.foot-bottom a{color:#9a9a9a}
+
+/* mobile pay bar */
+.paybar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(14,14,14,.94);border-top:1px solid var(--line-2);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transform:translateY(110%);transition:transform .25s}
+.paybar.on{transform:none}
+.paybar-info{min-width:0;flex:1;line-height:1.25}
+.paybar-info span{display:block;font-size:12px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.paybar-info strong{font-size:20px;font-weight:900}
+.paybar .btn{min-height:48px;padding:0 20px;font-size:13px;letter-spacing:.08em}
+@media (min-width:1024px){.paybar{display:none}}
+
+/* reveal (only when JS runs and motion is allowed) */
+@media (prefers-reduced-motion:no-preference){.js .rv{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}.js .rv.in{opacity:1;transform:none}}
+</style>
+<!--lp:jsonld-->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.durdenvpn.org/#org","name":"DurdenVPN","url":"https://www.durdenvpn.org/","logo":"https://www.durdenvpn.org/lp/logo-256.webp","sameAs":["https://t.me/durdenvpn"],"contactPoint":[{"@type":"ContactPoint","contactType":"customer support","url":"https://t.me/durdenvpn_support","email":"support@durdenvpn.org"}]},{"@type":"Product","name":"DurdenVPN","description":"Подключение за минуту: выберите тариф, оплатите картой, СБП или криптой — ссылка придёт на email или в Telegram. 1000 ГБ, 3 устройства, от 1 до 12 месяцев.","brand":{"@id":"https://www.durdenvpn.org/#org"},"image":"https://www.durdenvpn.org/lp/og-image.jpg","offers":{"@type":"AggregateOffer","priceCurrency":"RUB","lowPrice":"99.00","highPrice":"3499.00","offerCount":8,"offers":[{"@type":"Offer","name":"Белый интернет + Обычный — 1 месяц","price":"299.00","priceCurrency":"RUB","availability":"https://schema.org/InStock","url":"https://www.durdenvpn.org/buy/landing"},{"@type":"Offer","name":"Белый интернет + Обычный — 2 месяца","price":"599.00","priceCurrency":"RUB","availability":"https://schema.org/InStock","url":"https://www.durdenvpn.org/buy/landing"},{"@type":"Offer","name":"Белый интернет + Обычный — 3 месяца","price":"899.00","priceCurrency":"RUB","availability":"https://schema.org/InStock","url":"https://www.durdenvpn.org/buy/landing"},{"@type":"Offer","name":"Белый интернет + Обычный — 12 месяцев","price":"3499.00","priceCurrency":"RUB","availability":"https://schema.org/InStock","url":"https://www.durdenvpn.org/buy/landing"},{"@type":"Offer","name":"Обычный — 1 месяц","price":"99.00","priceCurrency":"RUB","availability":"https://schema.org/InStock","url":"https://www.durdenvpn.org/buy/landing"},{"@type":"Offer","name":"Обычный — 2 месяца","price":"199.00","priceCurrency":"RUB","availability":"https://schema.org/InStock","url":"https://www.durdenvpn.org/buy/landing"},{"@type":"Offer","name":"Обычный — 3 месяца","price":"299.00","priceCurrency":"RUB","availability":"https://schema.org/InStock","url":"https://www.durdenvpn.org/buy/landing"},{"@type":"Offer","name":"Обычный — 12 месяцев","price":"1199.00","priceCurrency":"RUB","availability":"https://schema.org/InStock","url":"https://www.durdenvpn.org/buy/landing"}]}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Нужна ли регистрация?","acceptedAnswer":{"@type":"Answer","text":"Нет. Укажите email или Telegram-ник — ключ подписки придёт туда, а личный кабинет создастся автоматически."}},{"@type":"Question","name":"Как оплатить?","acceptedAnswer":{"@type":"Answer","text":"Карта, СБП, крипта. Ссылка на оплату откроется после нажатия «Оплатить»."}},{"@type":"Question","name":"Сколько устройств можно подключить?","acceptedAnswer":{"@type":"Answer","text":"До 3 устройств на одной подписке одновременно."}},{"@type":"Question","name":"Как подключиться после оплаты?","acceptedAnswer":{"@type":"Answer","text":"Откройте ключ подписки в приложении-клиенте, например Happ, — серверы подтянутся сами. Пошаговая инструкция есть в личном кабинете."}},{"@type":"Question","name":"Что такое «Белый интернет»?","acceptedAnswer":{"@type":"Answer","text":"Отдельный пакет трафика для работы, когда мобильный интернет ограничен «белыми списками» сайтов. Он входит в тариф «Белый интернет + Обычный» вместе с обычным VPN-трафиком."}},{"@type":"Question","name":"Как продлить подписку?","acceptedAnswer":{"@type":"Answer","text":"В личном кабинете — новый срок добавится к текущему, оставшиеся дни не пропадут."}},{"@type":"Question","name":"Можно ли вернуть деньги?","acceptedAnswer":{"@type":"Answer","text":"Да, если услуга не была оказана в течение 3 дней после оплаты. Напишите в поддержку @durdenvpn_support в течение 7 дней — заявку рассмотрят за 5 рабочих дней, деньги вернутся на те же реквизиты в течение 10 рабочих дней."}}]}]}</script>
+<!--/lp:jsonld-->
+</head>
+<body>
+<a class="skip" href="#checkout" data-i18n="skip">Перейти к оформлению</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9m-3 3 3 3m-6 0 2 2"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="1.5"/><path d="M2.5 10h19M6 15h4"/></symbol>
+<symbol id="i-devices" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2.5" y="4" width="14" height="10" rx="1"/><path d="M6 18h7"/><rect x="17" y="9" width="5" height="11" rx="1"/></symbol>
+<symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 17a9 9 0 1 1 17 0"/><path d="m12 14 4-5"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="1.5"/><path d="M3 10h18M8 3v4m8-4v4"/></symbol>
+<symbol id="i-sbp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 3v18l6-3.5V6.5z"/><path d="M10 6.5 20 12l-10 5.5"/></symbol>
+<symbol id="i-coin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.5 8h4a2 2 0 0 1 0 4h-4h4.5a2 2 0 0 1 0 4h-4.5zM11 6.5V8m0 8v1.5"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM3 7l12-4v4"/><circle cx="16.5" cy="13.5" r="1.2"/></symbol>
+</svg>
+
+<div class="wrap">
+<header class="top">
+  <a class="logo" href="/" aria-label="DurdenVPN — главная">
+    <img src="/lp/logo-128.webp" width="44" height="44" alt="" fetchpriority="high">
+    <b>DURDENVPN</b>
+  </a>
+  <nav class="nav" aria-label="Разделы">
+    <a href="#why" data-i18n="navWhy">Преимущества</a>
+    <a href="#checkout" data-i18n="navPlans">Тарифы</a>
+    <a href="#faq" data-i18n="navFaq">Вопросы</a>
+  </nav>
+  <a class="login" href="/login" data-i18n="login">Войти</a>
+  <div class="lang" role="group" aria-label="Язык / Language">
+    <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <h1 id="hero-title"><span class="xl">DURDENVPN</span><span class="sub" data-i18n="heroLead">VPN без регистрации. Оплатили — ключ уже у вас на email или в Telegram.</span></h1>
+  <p class="lead tag" data-d="subtitle">Переходи к нам!</p>
+  <div class="cta-row">
+    <a class="btn" href="#checkout" id="hero-cta"><span data-i18n="cta">Выбрать тариф</span><span aria-hidden="true">↓</span></a>
+    <p class="price-note"><b><span data-i18n="from">от</span> <span data-d="minPrice">99 ₽</span></b><span data-i18n="perMonth">в месяц</span></p>
+  </div>
+  <ul class="stats">
+    <li class="stat"><b><small data-i18n="from">от</small><span data-d="minPriceNum">99</span><small>₽</small></b><span data-i18n="perMonth">в месяц</span></li>
+    <li class="stat"><b data-d="devicesNum">3</b><span data-d="devicesLabel">устройства</span></li>
+    <li class="stat"><b><span data-d="trafficNum">1000</span><small data-d="trafficUnit">ГБ</small></b><span data-d="trafficLabel">трафика</span></li>
+    <li class="stat"><b data-d="payCount">3</b><span data-d="payLabel">способа оплаты</span></li>
+  </ul>
+</section>
+
+<section class="section" id="why" aria-labelledby="why-title">
+  <p class="kicker" data-i18n="advKicker">Преимущества</p>
+  <h2 class="h2" id="why-title" data-i18n="advTitle">Почему DurdenVPN</h2>
+  <ul class="grid3">
+    <li class="card rv"><div class="ic"><svg><use href="#i-bolt"/></svg></div><h3 data-i18n="advFastTitle">Ключ за минуту</h3><p data-i18n="advFastText">Оплатили — и ссылка на подписку уже у вас: на email или в Telegram.</p></li>
+    <li class="card rv"><div class="ic"><svg><use href="#i-key"/></svg></div><h3 data-i18n="advNoSignupTitle">Без регистрации</h3><p data-i18n="advNoSignupText">Нужен только email или Telegram-ник. Личный кабинет создастся сам.</p></li>
+    <li class="card rv"><div class="ic"><svg><use href="#i-card"/></svg></div><h3 data-i18n="advPayTitle">Удобная оплата</h3><p data-d="advPayText">Карта, СБП, крипта — выбирайте, как удобно.</p></li>
+    <li class="card rv"><div class="ic"><svg><use href="#i-devices"/></svg></div><h3 data-d="advDevicesTitle">До 3 устройств</h3><p data-i18n="advDevicesText">Телефон, ноутбук, планшет — одна подписка на всё.</p></li>
+    <li class="card rv"><div class="ic"><svg><use href="#i-gauge"/></svg></div><h3 data-d="advTrafficTitle">1000 ГБ трафика</h3><p data-i18n="advTrafficText">Хватит на видео, звонки и работу.</p></li>
+    <li class="card rv"><div class="ic"><svg><use href="#i-cal"/></svg></div><h3 data-i18n="advTermTitle">Гибкий срок</h3><p data-d="advTermText">От 1 до 12 месяцев — на сколько удобно.</p></li>
+  </ul>
+</section>
+
+<section class="section" id="how" aria-labelledby="how-title">
+  <p class="kicker" data-i18n="stepsKicker">Как это работает</p>
+  <h2 class="h2" id="how-title" data-i18n="stepsTitle">Три шага до VPN</h2>
+  <ol class="steps3">
+    <li class="rv"><h3 data-i18n="step1Title">Выберите тариф</h3><p data-d="step1Text">Срок от 1 до 12 месяцев.</p></li>
+    <li class="rv"><h3 data-i18n="step2Title">Оплатите</h3><p data-d="step2Text">Карта, СБП, крипта.</p></li>
+    <li class="rv"><h3 data-i18n="step3Title">Подключитесь</h3><p data-i18n="step3Text">Ключ придёт на email или в Telegram — откройте его в приложении.</p></li>
+  </ol>
+</section>
+
+<section class="section" id="checkout" aria-labelledby="checkout-title">
+  <p class="kicker" data-i18n="checkoutKicker">Оформление</p>
+  <h2 class="h2" id="checkout-title" data-i18n="checkoutTitle">Выберите тариф</h2>
+  <p class="lead" data-i18n="checkoutLead">Ключ придёт на email или в Telegram сразу после оплаты.</p>
+  <div class="discount" id="discount" hidden></div>
+  <form class="checkout" id="buy" novalidate>
+    <div>
+      <fieldset class="step">
+        <legend><span class="n">1</span><span data-i18n="chooseTariff">Тариф</span></legend>
+        <div class="tariffs" id="tariffs"></div>
+      </fieldset>
+      <fieldset class="step" id="period-step">
+        <legend><span class="n">2</span><span data-i18n="choosePeriod">Срок</span></legend>
+        <div class="periods" id="periods"></div>
+      </fieldset>
+      <div class="step">
+        <div class="legend"><span class="n">3</span><label for="contact" data-i18n="contactLabel">Куда прислать ключ</label></div>
+        <div id="gift-toggle" hidden>
+          <div class="seg" role="radiogroup" data-i18n-aria="giftToggle" aria-label="Тип покупки">
+            <label><input type="radio" name="buyfor" value="me" checked><span data-i18n="forMe">Для себя</span></label>
+            <label><input type="radio" name="buyfor" value="gift"><span data-i18n="asGift">В подарок</span></label>
+          </div>
+        </div>
+        <input class="field" id="contact" name="contact" type="text" inputmode="email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="255" aria-describedby="contact-hint contact-err" placeholder="email@example.com или @username" data-i18n-ph="contactPlaceholder">
+        <p class="hint" id="contact-hint" data-i18n="contactHint">Email или Telegram-ник с @. Туда же придут данные для входа в личный кабинет.</p>
+        <p class="err" id="contact-err" hidden></p>
+        <div class="gift-fields" id="gift-fields" hidden>
+          <label class="sr-only" for="gift-to" data-i18n="recipientLabel">Кому подарить</label>
+          <input class="field" id="gift-to" type="text" inputmode="email" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="255" aria-describedby="gift-err" placeholder="email или @username получателя" data-i18n-ph="recipientPlaceholder">
+          <p class="err" id="gift-err" hidden></p>
+          <label class="sr-only" for="gift-msg" data-i18n="giftMessageLabel">Поздравление (необязательно)</label>
+          <textarea class="field" id="gift-msg" maxlength="500" placeholder="Поздравление (необязательно)" data-i18n-ph="giftMessageLabel"></textarea>
+        </div>
+      </div>
+      <fieldset class="step">
+        <legend><span class="n">4</span><span data-i18n="paymentMethod">Способ оплаты</span></legend>
+        <div class="methods" id="methods"></div>
+      </fieldset>
+    </div>
+    <aside class="summary" aria-labelledby="sum-title">
+      <h3 id="sum-title" data-i18n="yourOrder">Ваш заказ</h3>
+      <dl>
+        <dt data-i18n="selectedTariff">Тариф</dt><dd id="s-tariff">—</dd>
+        <dt data-i18n="period">Срок</dt><dd id="s-period">—</dd>
+        <dt data-i18n="payWith">Оплата</dt><dd id="s-method">—</dd>
+      </dl>
+      <div class="total"><span data-i18n="total">Итого</span><b id="s-total">—</b></div>
+      <button class="btn btn-pay" type="submit" id="pay">Оплатить</button>
+      <p class="err" id="pay-err" role="alert" hidden></p>
+      <p class="legal" data-i18n="legal">Нажимая «Оплатить», вы принимаете условия <a href="/offer">публичной оферты</a> и <a href="/privacy">политики конфиденциальности</a>.</p>
+      <ul class="assure">
+        <li data-i18n="assure1">Ключ приходит сразу после оплаты</li>
+        <li data-i18n="assure2">Без регистрации — кабинет создастся сам</li>
+        <li><span data-i18n="assure3">Вопросы?</span>&nbsp;<a href="https://t.me/durdenvpn_support" rel="noopener">@durdenvpn_support</a></li>
+      </ul>
+    </aside>
+  </form>
+  <noscript><p class="noscript">Для оформления заказа включите JavaScript или напишите нам в Telegram: <a href="https://t.me/durdenvpn_support">@durdenvpn_support</a>.</p></noscript>
+</section>
+
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <p class="kicker" data-i18n="faqKicker">Вопросы</p>
+  <h2 class="h2" id="faq-title" data-i18n="faqTitle">Частые вопросы</h2>
+  <div class="faq">
+    <details name="faq" open><summary data-i18n="faqSignupQ">Нужна ли регистрация?</summary><p data-i18n="faqSignupA">Нет. Укажите email или Telegram-ник — ключ подписки придёт туда, а личный кабинет создастся автоматически.</p></details>
+    <details name="faq"><summary data-i18n="faqPayQ">Как оплатить?</summary><p data-d="faqPayA">Карта, СБП, крипта. Ссылка на оплату откроется после нажатия «Оплатить».</p></details>
+    <details name="faq"><summary data-i18n="faqDevicesQ">Сколько устройств можно подключить?</summary><p data-d="faqDevicesA">До 3 устройств на одной подписке одновременно.</p></details>
+    <details name="faq"><summary data-i18n="faqConnectQ">Как подключиться после оплаты?</summary><p data-i18n="faqConnectA">Откройте ключ подписки в приложении-клиенте, например Happ, — серверы подтянутся сами. Пошаговая инструкция есть в личном кабинете.</p></details>
+    <details name="faq" id="faq-white"><summary data-i18n="faqWhiteQ">Что такое «Белый интернет»?</summary><p data-i18n="faqWhiteA">Отдельный пакет трафика для работы, когда мобильный интернет ограничен «белыми списками» сайтов. Он входит в тариф «Белый интернет + Обычный» вместе с обычным VPN-трафиком.</p></details>
+    <details name="faq"><summary data-i18n="faqRenewQ">Как продлить подписку?</summary><p data-i18n="faqRenewA">В <a href="/login">личном кабинете</a> — новый срок добавится к текущему, оставшиеся дни не пропадут.</p></details>
+    <details name="faq" id="faq-refund"><summary data-i18n="faqRefundQ">Можно ли вернуть деньги?</summary><p data-i18n="faqRefundA">Да, если услуга не была оказана в течение 3 дней после оплаты. Напишите в поддержку <a href="https://t.me/durdenvpn_support" rel="noopener">@durdenvpn_support</a> в течение 7 дней — заявку рассмотрят за 5 рабочих дней, деньги вернутся на те же реквизиты в течение 10 рабочих дней.</p></details>
+    <details name="faq" id="faq-gift" hidden><summary data-i18n="faqGiftQ">Можно ли подарить подписку?</summary><p data-i18n="faqGiftA">Да. При оформлении отметьте покупку в подарок и укажите контакт получателя — ключ уйдёт ему.</p></details>
+  </div>
+</section>
+
+<section class="final rv" aria-labelledby="final-title">
+  <p class="kicker" data-i18n="finalKicker">Готовы?</p>
+  <h2 class="h2" id="final-title" data-i18n="finalTitle">Подключайтесь за минуту</h2>
+  <p class="lead" data-i18n="finalText">Без регистрации. Ключ придёт сразу после оплаты.</p>
+  <a class="btn" href="#checkout"><span data-i18n="cta">Выбрать тариф</span><span aria-hidden="true">↑</span></a>
+</section>
+</main>
+</div>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div>
+        <div class="foot-logo">DURDEN<span>VPN</span></div>
+        <p class="foot-tagline">Fast. Stable. No bullshit.</p>
+        <p class="foot-desc" data-i18n="footDesc">Забудь о медленном интернете, ограничениях и лишнем шуме. DurdenVPN создан для тех, кому нужен быстрый и стабильный доступ без компромиссов.</p>
+      </div>
+      <nav class="foot-links" aria-label="Ссылки">
+        <div class="foot-col"><p class="foot-title" data-i18n="footNav">Навигация</p><a href="#checkout" data-i18n="footBuy">Купить VPN</a><a href="/login" data-i18n="footCabinet">Личный кабинет</a><a href="/" data-i18n="footHome">Главная</a></div>
+        <div class="foot-col"><p class="foot-title" data-i18n="footDocs">Документы</p><a href="/privacy" data-i18n="footPrivacy">Политика конфиденциальности</a><a href="/offer" data-i18n="footOffer">Публичная оферта</a><a href="#faq-refund" data-i18n="footRefund">Возврат средств</a></div>
+        <div class="foot-col"><p class="foot-title" data-i18n="footContact">Контакты</p><a href="https://t.me/durdenvpn" rel="noopener" data-i18n="footChannel">Telegram-канал</a><a href="https://t.me/durdenvpn_support" rel="noopener" data-i18n="footSupport">Поддержка</a><a href="mailto:support@durdenvpn.org">support@durdenvpn.org</a></div>
+      </nav>
+    </div>
+    <div class="foot-warn">
+      <i aria-hidden="true">!</i>
+      <div><b data-i18n="footRuleTitle">Правило №1</b><p data-i18n="footRuleText">Ты сам отвечаешь за то, что делаешь в сети. Пользуясь DurdenVPN, вы принимаете условия <a href="/offer">оферты</a> и правила сервиса.</p></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 DurdenVPN</span><a href="https://t.me/durdenvpn_support" rel="noopener">@durdenvpn_support</a></div>
+  </div>
+</footer>
+
+<aside class="paybar" id="paybar" aria-label="Быстрая оплата" data-i18n-aria="quickPay" aria-hidden="true">
+  <div class="paybar-info"><span id="pb-name"></span><strong id="pb-price"></strong></div>
+  <button class="btn" type="button" id="pb-btn" tabindex="-1">К оплате</button>
+</aside>
+
+<!--lp:data-->
+<script id="lp-data" type="application/json">{"slug":"landing","title":"DurdenVPN","subtitle":"Переходи к нам!","features":[],"tariffs":[{"id":5,"name":"👊Белый интернет+Обычный👊","description":"👊Обычный VPN и Белый интернет 👊\n1000 ГБ Обычного VPN💥\n100 ГБ Белого интернета👾","traffic_limit_gb":1000,"device_limit":3,"tier_level":3,"periods":[{"days":30,"label":"1 month","price_kopeks":29900,"price_label":"299 ₽","original_price_kopeks":null,"original_price_label":null,"discount_percent":null},{"days":60,"label":"2 months","price_kopeks":59900,"price_label":"599 ₽","original_price_kopeks":null,"original_price_label":null,"discount_percent":null},{"days":90,"label":"3 months","price_kopeks":89900,"price_label":"899 ₽","original_price_kopeks":null,"original_price_label":null,"discount_percent":null},{"days":360,"label":"12 mo.","price_kopeks":349900,"price_label":"3499 ₽","original_price_kopeks":null,"original_price_label":null,"discount_percent":null}],"is_daily":false,"daily_price_kopeks":0},{"id":2,"name":"📦Обычный📦","description":"Обычный VPN🛰️","traffic_limit_gb":1000,"device_limit":3,"tier_level":1,"periods":[{"days":30,"label":"1 month","price_kopeks":9900,"price_label":"99 ₽","original_price_kopeks":null,"original_price_label":null,"discount_percent":null},{"days":60,"label":"2 months","price_kopeks":19900,"price_label":"199 ₽","original_price_kopeks":null,"original_price_label":null,"discount_percent":null},{"days":90,"label":"3 months","price_kopeks":29900,"price_label":"299 ₽","original_price_kopeks":null,"original_price_label":null,"discount_percent":null},{"days":360,"label":"12 mo.","price_kopeks":119900,"price_label":"1199 ₽","original_price_kopeks":null,"original_price_label":null,"discount_percent":null}],"is_daily":false,"daily_price_kopeks":0}],"payment_methods":[{"method_id":"lava","display_name":"Lava🔥","description":null,"icon_url":null,"sort_order":0,"min_amount_kopeks":10000,"max_amount_kopeks":null,"currency":null,"sub_options":[{"id":"card","name":"Карта"},{"id":"sbp","name":"СБП"}]},{"method_id":"heleket","display_name":"♠️Heleket (Крипта)","description":null,"icon_url":null,"sort_order":1,"min_amount_kopeks":5000,"max_amount_kopeks":null,"currency":null,"sub_options":null}],"gift_enabled":false,"meta_title":"DurdenVPN — VPN без ограничений, оплата картой и СБП","meta_description":"Подключение за минуту: выберите тариф, оплатите картой, СБП или криптой — ссылка придёт на email или в Telegram. 1000 ГБ, 3 устройства, от 1 до 12 месяцев.","discount":null,"background_config":null,"sticky_pay_button":false,"analytics_view_enabled":true,"analytics_view_goal":"landing_view","analytics_click_enabled":true,"analytics_click_goal":"landing_pay"}</script>
+<!--/lp:data-->
+<script>
+(function () {
+'use strict';
+/*derive:start*/
+var EMOJI = (function () {
+  try { return new RegExp('[\\p{Extended_Pictographic}\\u{1F1E6}-\\u{1F1FF}\\u{1F3FB}-\\u{1F3FF}\\uFE0F\\u200D\\u20E3]', 'gu'); }
+  catch (e) { return /[\uD83C-\uDBFF][\uDC00-\uDFFF]|[←-⯿]|️|‍/g; }
+})();
+var EMOJI_ONE = new RegExp(EMOJI.source, EMOJI.flags.replace('g', ''));
+function clean(s) { return String(s == null ? '' : s).replace(EMOJI, '').replace(/\s+/g, ' ').trim(); }
+function icon(s) { var m = String(s || '').match(EMOJI_ONE); return m && m[0] !== '️' && m[0] !== '‍' ? m[0] : ''; }
+function niceName(s) { return clean(s).replace(/\s*\+\s*/g, ' + '); }
+function months(days) { return Math.max(1, Math.round(days / 30)); }
+function payLabels(m) {
+  if (m.sub_options && m.sub_options.length) return m.sub_options.map(function (o) { return clean(o.name); }).filter(Boolean);
+  var p = /\(([^)]+)\)/.exec(m.display_name || '');
+  if (p) return [p[1].trim()];
+  var s = clean(m.display_name);
+  return s ? [s] : [];
+}
+function sortedMethods(cfg) { return (cfg.payment_methods || []).slice().sort(function (a, b) { return (a.sort_order || 0) - (b.sort_order || 0); }); }
+function derive(cfg) {
+  var minMonthly = null, maxDevices = 0, unlimDev = false, maxTraffic = 0, unlimTraffic = false, minM = Infinity, maxM = 0, cheaper = false;
+  (cfg.tariffs || []).forEach(function (t) {
+    if (t.device_limit === 0) unlimDev = true;
+    maxDevices = Math.max(maxDevices, t.device_limit || 0);
+    if (t.traffic_limit_gb === 0) unlimTraffic = true;
+    maxTraffic = Math.max(maxTraffic, t.traffic_limit_gb || 0);
+    if (t.is_daily && t.daily_price_kopeks) { var d = t.daily_price_kopeks * 30; minMonthly = minMonthly === null ? d : Math.min(minMonthly, d); return; }
+    var per = [];
+    (t.periods || []).forEach(function (p) {
+      var m = months(p.days), v = p.price_kopeks / m;
+      per.push(v); minMonthly = minMonthly === null ? v : Math.min(minMonthly, v);
+      minM = Math.min(minM, m); maxM = Math.max(maxM, m);
+    });
+    if (per.length > 1 && per[per.length - 1] < per[0] * 0.97) cheaper = true;
+  });
+  var seen = {}, pays = [];
+  sortedMethods(cfg).forEach(function (m) {
+    payLabels(m).forEach(function (l) { var k = l.toLowerCase(); if (!seen[k]) { seen[k] = 1; pays.push(l); } });
+  });
+  var prices = [];
+  (cfg.tariffs || []).forEach(function (t) { (t.periods || []).forEach(function (p) { prices.push(p.price_kopeks); }); });
+  return {
+    minMonthly: minMonthly === null ? null : Math.ceil(minMonthly / 100) * 100,
+    maxDevices: maxDevices, unlimitedDevices: unlimDev, maxTrafficGb: maxTraffic, unlimitedTraffic: unlimTraffic,
+    minMonths: isFinite(minM) ? minM : 0, maxMonths: maxM, longerIsCheaper: cheaper, payments: pays,
+    low: prices.length ? Math.min.apply(null, prices) : 0, high: prices.length ? Math.max.apply(null, prices) : 0
+  };
+}
+function num(v, lang) { return new Intl.NumberFormat(lang === 'en' ? 'en-US' : 'ru-RU', { maximumFractionDigits: v % 1 ? 2 : 0, minimumFractionDigits: v % 1 ? 2 : 0, useGrouping: Math.abs(v) >= 10000 }).format(v); }
+function rub(kop, lang) { return num(Math.round(kop) / 100, lang) + ' ₽'; }
+function plural(lang, n, forms) { var r = new Intl.PluralRules(lang === 'en' ? 'en' : 'ru').select(n); return (forms[r] || forms.other).replace('{n}', n); }
+function fill(s, o) { return s.replace(/\{(\w+)\}/g, function (_, k) { return o[k] != null ? o[k] : ''; }); }
+var T = {
+  ru: {
+    from: 'от', gb: 'ГБ', unlimited: 'Безлимит', trafficLabel: 'трафика', perMonthShort: '/мес',
+    devicesLabel: { one: 'устройство', few: 'устройства', many: 'устройств', other: 'устройства' },
+    devicesN: { one: '{n} устройство', few: '{n} устройства', many: '{n} устройств', other: '{n} устройства' },
+    payLabel: { one: 'способ оплаты', few: 'способа оплаты', many: 'способов оплаты', other: 'способа оплаты' },
+    advDevicesTitle: { one: 'До {n} устройства', few: 'До {n} устройств', many: 'До {n} устройств', other: 'До {n} устройств' },
+    advDevicesUnlim: 'Любое число устройств', advTrafficTitle: '{gb} ГБ трафика', advTrafficUnlim: 'Безлимитный трафик',
+    advPayText: '{methods} — выбирайте, как удобно.',
+    advTermText: 'От {from} до {to} месяцев — на сколько удобно.', advTermCheaper: 'От {from} до {to} мес. — чем дольше, тем дешевле месяц.',
+    step1Text: 'Срок от {from} до {to} месяцев.', step1Plain: 'И срок, который вам подходит.',
+    step2Text: '{methods}.', step2Plain: 'Любым удобным способом.',
+    faqPayA: '{methods}. Ссылка на оплату откроется после нажатия «Оплатить».',
+    faqDevicesA: { one: 'До {n} устройства на одной подписке одновременно.', few: 'До {n} устройств на одной подписке одновременно.', many: 'До {n} устройств на одной подписке одновременно.', other: 'До {n} устройств на одной подписке одновременно.' },
+    faqDevicesUnlim: 'Сколько угодно — ограничения по числу устройств нет.',
+    trafficN: '{n} ГБ трафика', unlimTraffic: 'Безлимитный трафик', unlimDevices: 'Без лимита устройств',
+    nMonths: { one: '{n} месяц', few: '{n} месяца', many: '{n} месяцев', other: '{n} месяца' },
+    nDays: { one: '{n} день', few: '{n} дня', many: '{n} дней', other: '{n} дня' },
+    perDay: '{price} в день'
+  },
+  en: {
+    from: 'from', gb: 'GB', unlimited: 'Unlimited', trafficLabel: 'of traffic', perMonthShort: '/mo',
+    devicesLabel: { one: 'device', other: 'devices' },
+    devicesN: { one: '{n} device', other: '{n} devices' },
+    payLabel: { one: 'payment method', other: 'payment methods' },
+    advDevicesTitle: { one: 'Up to {n} device', other: 'Up to {n} devices' },
+    advDevicesUnlim: 'Any number of devices', advTrafficTitle: '{gb} GB of traffic', advTrafficUnlim: 'Unlimited traffic',
+    advPayText: '{methods} — pay the way you like.',
+    advTermText: 'From {from} to {to} months — as long as you need.', advTermCheaper: 'From {from} to {to} months — the longer, the cheaper per month.',
+    step1Text: 'Term from {from} to {to} months.', step1Plain: 'And a term that suits you.',
+    step2Text: '{methods}.', step2Plain: 'Any way you like.',
+    faqPayA: '{methods}. The payment link opens after you press «Pay».',
+    faqDevicesA: { one: 'Up to {n} device on one subscription at the same time.', other: 'Up to {n} devices on one subscription at the same time.' },
+    faqDevicesUnlim: 'As many as you like — there is no device limit.',
+    trafficN: '{n} GB of traffic', unlimTraffic: 'Unlimited traffic', unlimDevices: 'Unlimited devices',
+    nMonths: { one: '{n} month', other: '{n} months' },
+    nDays: { one: '{n} day', other: '{n} days' },
+    perDay: '{price} a day'
+  }
+};
+function periodLabel(days, lang) {
+  var t = T[lang] || T.ru, y = Math.round(days / 365);
+  var m = y >= 1 && Math.abs(days - 365 * y) <= 5 ? 12 * y : days % 30 === 0 ? days / 30 : 0;
+  return m ? plural(lang, m, t.nMonths) : plural(lang, days, t.nDays);
+}
+function methodsText(d, lang) {
+  return d.payments.map(function (n, i) { return i === 0 || n === n.toUpperCase() || lang === 'en' ? n : n.charAt(0).toLowerCase() + n.slice(1); }).join(', ');
+}
+function texts(cfg, lang) {
+  var t = T[lang] || T.ru, d = derive(cfg), methods = methodsText(d, lang), r = {};
+  r.subtitle = cfg.subtitle || '';
+  r.minPrice = d.minMonthly === null ? '' : rub(d.minMonthly, lang);
+  r.minPriceNum = d.minMonthly === null ? '' : num(d.minMonthly / 100, lang);
+  r.devicesNum = d.unlimitedDevices ? '∞' : String(d.maxDevices);
+  r.devicesLabel = plural(lang, d.maxDevices, t.devicesLabel);
+  r.trafficNum = d.unlimitedTraffic ? '∞' : num(d.maxTrafficGb, lang);
+  r.trafficUnit = d.unlimitedTraffic ? '' : t.gb;
+  r.trafficLabel = t.trafficLabel;
+  r.payCount = String(d.payments.length);
+  r.payLabel = plural(lang, d.payments.length, t.payLabel);
+  r.advPayText = fill(t.advPayText, { methods: methods });
+  r.advDevicesTitle = d.unlimitedDevices ? t.advDevicesUnlim : plural(lang, d.maxDevices, t.advDevicesTitle);
+  r.advTrafficTitle = d.unlimitedTraffic ? t.advTrafficUnlim : fill(t.advTrafficTitle, { gb: num(d.maxTrafficGb, lang) });
+  r.advTermText = fill(d.longerIsCheaper ? t.advTermCheaper : t.advTermText, { from: d.minMonths, to: d.maxMonths });
+  r.step1Text = d.maxMonths > d.minMonths ? fill(t.step1Text, { from: d.minMonths, to: d.maxMonths }) : t.step1Plain;
+  r.step2Text = methods ? fill(t.step2Text, { methods: methods }) : t.step2Plain;
+  r.faqPayA = fill(t.faqPayA, { methods: methods });
+  r.faqDevicesA = d.unlimitedDevices ? t.faqDevicesUnlim : plural(lang, d.maxDevices, t.faqDevicesA);
+  return r;
+}
+/*derive:end*/
+
+var SLUG = 'landing', API = '/api', GA_ID = 'G-TNJJG3ZCJW';
+// Respect min_amount_kopeks / max_amount_kopeks of payment methods (the SPA ignores them and the
+// payment fails only after "Pay"). Set to false if the backend accepts amounts outside these limits.
+var RESPECT_LIMITS = true;
+var doc = document, root = doc.documentElement;
+root.className += ' js';
+function $(id) { return doc.getElementById(id); }
+function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; }); }
+function store(kind) {
+  var s = null;
+  try { s = window[kind]; s.setItem('__t', '1'); s.removeItem('__t'); } catch (e) { s = null; }
+  return {
+    get: function (k) { try { return s ? s.getItem(k) : null; } catch (e) { return null; } },
+    set: function (k, v) { try { if (s) s.setItem(k, v); } catch (e) {} },
+    del: function (k) { try { if (s) s.removeItem(k); } catch (e) {} }
+  };
+}
+var LS = store('localStorage'), SS = store('sessionStorage');
+
+/* ---------- attribution: same keys and TTLs as the cabinet SPA ---------- */
+var params;
+try { params = new URLSearchParams(location.search); } catch (e) { params = null; }
+var DAY = 864e5, SLUG_RE = /^[a-zA-Z0-9_-]{1,64}$/, urlDirty = false;
+function capture(param, key) {
+  var v = params && params.get(param);
+  if (!v) return;
+  if (SLUG_RE.test(v)) { LS.set(key, v); LS.set(key + '_ttl', String(Date.now() + DAY)); }
+  params['delete'](param); urlDirty = true;
+}
+function ttlGet(key) {
+  var v = LS.get(key), ttl = Number(LS.get(key + '_ttl'));
+  if (!v) return null;
+  if (!ttl || Date.now() > ttl) { LS.del(key); LS.del(key + '_ttl'); return null; }
+  return v;
+}
+capture('campaign', 'campaign_slug');
+capture('ref', 'referral_code');
+if (doc.referrer && !SS.get('landing_referrer')) SS.set('landing_referrer', doc.referrer.slice(0, 500));
+if (params && params.get('subid')) SS.set('landing_subid', params.get('subid').slice(0, 255));
+var prefill = (params && params.get('contact')) || LS.get('lp_contact_' + SLUG) || '';
+if (params && params.has('contact')) { params['delete']('contact'); urlDirty = true; }
+if (urlDirty && history.replaceState) {
+  var qs = params.toString();
+  history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+}
+
+/* ---------- i18n for static text ---------- */
+var STATIC_EN = {
+  skip: 'Skip to checkout', navWhy: 'Advantages', navPlans: 'Plans', navFaq: 'FAQ', login: 'Log in',
+  heroLead: 'VPN with no sign-up. Pay — and the key is already in your email or Telegram.',
+  cta: 'Choose a plan', from: 'from', perMonth: 'a month',
+  advKicker: 'Advantages', advTitle: 'Why DurdenVPN', advFastTitle: 'Key in a minute', advFastText: 'Pay — and your subscription link is already yours: by email or in Telegram.',
+  advNoSignupTitle: 'No sign-up', advNoSignupText: 'All you need is an email or a Telegram username. Your account is created automatically.',
+  advPayTitle: 'Easy payment', advDevicesText: 'Phone, laptop, tablet — one subscription for everything.', advTrafficText: 'Enough for video, calls and work.', advTermTitle: 'Flexible term',
+  stepsKicker: 'How it works', stepsTitle: 'Three steps to VPN', step1Title: 'Choose a plan', step2Title: 'Pay', step3Title: 'Connect', step3Text: 'The key arrives by email or in Telegram — open it in the app.',
+  checkoutKicker: 'Checkout', checkoutTitle: 'Choose a plan', checkoutLead: 'Your key arrives by email or in Telegram right after payment.',
+  chooseTariff: 'Plan', choosePeriod: 'Term', contactLabel: 'Where to send the key', giftToggle: 'Purchase type', forMe: 'For me', asGift: 'As a gift',
+  contactPlaceholder: 'email@example.com or @username', contactHint: 'Email or Telegram username with @. Your account login details will be sent there too.',
+  recipientLabel: 'Gift recipient', recipientPlaceholder: 'Recipient email or @username', giftMessageLabel: 'Greeting (optional)',
+  paymentMethod: 'Payment method', yourOrder: 'Your order', selectedTariff: 'Plan', period: 'Term', payWith: 'Payment', total: 'Total', pay: 'Pay', toPay: 'Checkout',
+  legal: 'By pressing «Pay» you accept the <a href="/offer">public offer</a> and the <a href="/privacy">privacy policy</a>.',
+  assure1: 'The key arrives right after payment', assure2: 'No sign-up — your account is created automatically', assure3: 'Questions?',
+  faqKicker: 'Questions', faqTitle: 'FAQ', faqSignupQ: 'Do I need to sign up?', faqSignupA: 'No. Enter your email or Telegram username — the subscription key will be sent there, and your account is created automatically.',
+  faqPayQ: 'How do I pay?', faqDevicesQ: 'How many devices can I connect?', faqConnectQ: 'How do I connect after payment?',
+  faqConnectA: 'Open the subscription key in a client app, for example Happ — the servers load automatically. Step-by-step instructions are in your account.',
+  faqWhiteQ: 'What is “White internet”?', faqWhiteA: 'A separate traffic package for when mobile internet is limited to “whitelisted” sites. It is included in the “White internet + Regular” plan together with regular VPN traffic.',
+  faqRenewQ: 'How do I renew my subscription?', faqRenewA: 'In your <a href="/login">account</a> — the new term is added to the current one, remaining days are kept.',
+  faqRefundQ: 'Can I get a refund?', faqRefundA: 'Yes, if the service was not provided within 3 days after payment. Message <a href="https://t.me/durdenvpn_support" rel="noopener">@durdenvpn_support</a> within 7 days — the request is reviewed in 5 business days and the money is returned to the same payment details within 10 business days.',
+  faqGiftQ: 'Can I give a subscription as a gift?', faqGiftA: 'Yes. At checkout, mark the purchase as a gift and enter the recipient\'s contact — the key will be sent to them.',
+  finalKicker: 'Ready?', finalTitle: 'Connect in a minute', finalText: 'No sign-up. The key arrives right after payment.',
+  footDesc: 'Forget slow internet, restrictions and extra noise. DurdenVPN is built for those who need fast and stable access without compromise.',
+  footNav: 'Navigation', footBuy: 'Buy VPN', footCabinet: 'Account', footHome: 'Home', footDocs: 'Documents', footPrivacy: 'Privacy policy', footOffer: 'Public offer', footRefund: 'Refunds',
+  quickPay: 'Quick checkout', footContact: 'Contact', footChannel: 'Telegram channel', footSupport: 'Support', footRuleTitle: 'Rule #1',
+  footRuleText: 'You are responsible for what you do online. By using DurdenVPN you accept the <a href="/offer">offer</a> and the service rules.'
+};
+var MSG = {
+  ru: { contactEmpty: 'Укажите email или Telegram-ник — туда придёт ключ.', contactBad: 'Проверьте адрес: нужен email (name@mail.ru) или Telegram-ник с @ (@username).',
+    giftEmpty: 'Укажите email или Telegram-ник получателя.', payBtn: 'Оплатить {price}', payShort: 'Оплатить', processing: 'Обработка…', toPay: 'К оплате',
+    purchaseError: 'Не удалось создать оплату. Попробуйте ещё раз или напишите в поддержку.', network: 'Нет связи с сервером. Проверьте интернет и попробуйте снова.',
+    minAmount: 'от {price}', maxAmount: 'до {price}', via: 'через {name}', unavailable: 'Тарифы временно недоступны. Напишите нам: @durdenvpn_support',
+    discountEnds: 'до конца' },
+  en: { contactEmpty: 'Enter your email or Telegram username — the key will be sent there.', contactBad: 'Check the address: an email (name@mail.com) or a Telegram username with @ (@username).',
+    giftEmpty: 'Enter the recipient\'s email or Telegram username.', payBtn: 'Pay {price}', payShort: 'Pay', processing: 'Processing…', toPay: 'Checkout',
+    purchaseError: 'Could not create the payment. Try again or contact support.', network: 'No connection to the server. Check your internet and try again.',
+    minAmount: 'from {price}', maxAmount: 'up to {price}', via: 'via {name}', unavailable: 'Plans are temporarily unavailable. Contact us: @durdenvpn_support',
+    discountEnds: 'ends in' }
+};
+var i18nNodes = doc.querySelectorAll('[data-i18n],[data-i18n-ph],[data-i18n-aria]');
+var lang = (LS.get('cabinet_language') || (navigator.language || 'ru')).slice(0, 2).toLowerCase() === 'en' ? 'en' : 'ru';
+function applyStatic() {
+  root.lang = lang;
+  for (var i = 0; i < i18nNodes.length; i++) {
+    var el = i18nNodes[i], k = el.getAttribute('data-i18n'), ph = el.getAttribute('data-i18n-ph'), ar = el.getAttribute('data-i18n-aria');
+    if (k) { if (el._ru == null) el._ru = el.innerHTML; el.innerHTML = lang === 'en' && STATIC_EN[k] ? STATIC_EN[k] : el._ru; }
+    if (ph) { if (el._ruPh == null) el._ruPh = el.getAttribute('placeholder'); el.setAttribute('placeholder', lang === 'en' && STATIC_EN[ph] ? STATIC_EN[ph] : el._ruPh); }
+    if (ar) { if (el._ruAr == null) el._ruAr = el.getAttribute('aria-label'); el.setAttribute('aria-label', lang === 'en' && STATIC_EN[ar] ? STATIC_EN[ar] : el._ruAr); }
+  }
+  var btns = doc.querySelectorAll('[data-lang]');
+  for (var j = 0; j < btns.length; j++) btns[j].setAttribute('aria-pressed', String(btns[j].getAttribute('data-lang') === lang));
+}
+
+/* ---------- state + rendering ---------- */
+var cfg = {};
+try { cfg = JSON.parse($('lp-data').textContent) || {}; } catch (e) { cfg = {}; }
+var st = { tariff: null, days: null, method: null, gift: false };
+var busy = false;
+
+function tariffs() { return (cfg.tariffs || []).filter(function (t) { return t.periods && t.periods.length; }); }
+function curTariff() { var l = tariffs(); for (var i = 0; i < l.length; i++) if (l[i].id === st.tariff) return l[i]; return null; }
+function curPeriod() { var t = curTariff(); if (!t) return null; for (var i = 0; i < t.periods.length; i++) if (t.periods[i].days === st.days) return t.periods[i]; return null; }
+function options() {
+  var out = [];
+  sortedMethods(cfg).forEach(function (m) {
+    var cap = clean(m.display_name).replace(/\s*\([^)]*\)\s*/g, ' ').trim();
+    if (m.sub_options && m.sub_options.length) {
+      m.sub_options.forEach(function (o) { out.push({ key: m.method_id + '_' + o.id, m: m, label: clean(o.name), cap: cap }); });
+    } else {
+      var p = /\(([^)]+)\)/.exec(m.display_name || '');
+      out.push({ key: m.method_id, m: m, label: p ? p[1].trim() : clean(m.display_name), cap: p ? cap : '' });
+    }
+  });
+  return out;
+}
+function optAllowed(o, price) {
+  if (!RESPECT_LIMITS) return '';
+  if (o.m.min_amount_kopeks && price < o.m.min_amount_kopeks) return MSG[lang].minAmount.replace('{price}', rub(o.m.min_amount_kopeks, lang));
+  if (o.m.max_amount_kopeks && price > o.m.max_amount_kopeks) return MSG[lang].maxAmount.replace('{price}', rub(o.m.max_amount_kopeks, lang));
+  return '';
+}
+function methodIcon(label) {
+  return /карт|card/i.test(label) ? 'i-card' : /сбп|sbp|qr/i.test(label) ? 'i-sbp' : /крипт|crypto|usdt|btc|ton/i.test(label) ? 'i-coin' : 'i-wallet';
+}
+function perMonthOf(t) { var best = null; t.periods.forEach(function (p) { var v = p.price_kopeks / months(p.days); best = best === null ? v : Math.min(best, v); }); return best; }
+
+function renderDerived() {
+  var r = texts(cfg, lang), els = doc.querySelectorAll('[data-d]');
+  for (var i = 0; i < els.length; i++) { var k = els[i].getAttribute('data-d'); if (r[k] != null) els[i].textContent = r[k]; }
+  var white = (cfg.tariffs || []).some(function (t) { return /бел\S* интернет|white internet/i.test(t.name + ' ' + t.description); });
+  $('faq-white').hidden = !white;
+  $('faq-gift').hidden = !cfg.gift_enabled;
+  $('gift-toggle').hidden = !cfg.gift_enabled;
+  if (!cfg.gift_enabled && st.gift) setGift(false);
+}
+
+function renderTariffs() {
+  var t = T[lang], html = '';
+  tariffs().forEach(function (tr) {
+    var ic = icon(tr.name), desc = String(tr.description || '').split(/\n+/).map(niceName).filter(Boolean);
+    var per = perMonthOf(tr);
+    var feats = [tr.traffic_limit_gb ? fill(t.trafficN, { n: num(tr.traffic_limit_gb, lang) }) : t.unlimTraffic,
+      tr.device_limit ? plural(lang, tr.device_limit, t.devicesN) : t.unlimDevices];
+    if (tr.is_daily && tr.daily_price_kopeks) feats.push(fill(t.perDay, { price: rub(tr.daily_price_kopeks, lang) }));
+    html += '<label class="opt"><input type="radio" name="tariff" value="' + esc(tr.id) + '"' + (tr.id === st.tariff ? ' checked' : '') + '>' +
+      '<span class="box"><span class="dot"></span><span class="t-name">' + (ic ? esc(ic) + ' ' : '') + esc(niceName(tr.name)) + '</span>' +
+      (desc.length ? '<ul class="t-desc">' + desc.map(function (l) { return '<li>' + esc(l) + '</li>'; }).join('') + '</ul>' : '') +
+      '<span class="t-feat">' + feats.map(function (f) { return '<span>' + esc(f) + '</span>'; }).join('') + '</span>' +
+      '<span class="t-price"><small>' + t.from + ' </small>' + rub(Math.ceil(per / 100) * 100, lang) + '<small>' + t.perMonthShort + '</small></span></span></label>';
+  });
+  $('tariffs').innerHTML = html || '<p class="err">' + esc(MSG[lang].unavailable) + '</p>';
+}
+
+function renderPeriods() {
+  var tr = curTariff(), html = '';
+  if (tr) {
+    var base = tr.periods[0].price_kopeks / months(tr.periods[0].days);
+    tr.periods.forEach(function (p) {
+      var m = months(p.days), save = Math.round((1 - p.price_kopeks / m / base) * 100), badge = '';
+      if (p.discount_percent) badge = '−' + esc(p.discount_percent) + '%';
+      else if (m > 1 && save >= 3) badge = '−' + save + '%';
+      var orig = p.original_price_kopeks && p.original_price_kopeks > p.price_kopeks ? '<s>' + rub(p.original_price_kopeks, lang) + '</s>' : '';
+      var pm = m > 1 && save >= 3 ? ' · ' + rub(Math.round(p.price_kopeks / m / 100) * 100, lang) + T[lang].perMonthShort : '';
+      html += '<label class="opt"><input type="radio" name="period" value="' + esc(p.days) + '"' + (p.days === st.days ? ' checked' : '') + '>' +
+        '<span class="box"><span class="p-label">' + esc(periodLabel(p.days, lang)) + (badge ? '<span class="badge">' + badge + '</span>' : '') + '</span>' +
+        '<span class="p-price">' + orig + rub(p.price_kopeks, lang) + pm + '</span></span></label>';
+    });
+  }
+  $('periods').innerHTML = html;
+  $('period-step').hidden = !tr;
+}
+
+function renderMethods() {
+  var p = curPeriod(), price = p ? p.price_kopeks : 0, html = '', list = options(), firstOk = null, curOk = false;
+  list.forEach(function (o) { if (!optAllowed(o, price)) { if (!firstOk) firstOk = o.key; if (o.key === st.method) curOk = true; } });
+  if (!curOk) st.method = firstOk;
+  list.forEach(function (o) {
+    var why = optAllowed(o, price), cap = why || (o.cap && o.cap.toLowerCase() !== o.label.toLowerCase() ? MSG[lang].via.replace('{name}', o.cap) : '');
+    html += '<label class="opt"><input type="radio" name="method" value="' + esc(o.key) + '"' + (o.key === st.method ? ' checked' : '') + (why ? ' disabled' : '') + '>' +
+      '<span class="box"><svg class="m-ic" aria-hidden="true"><use href="#' + methodIcon(o.label) + '"/></svg><span><span class="m-label">' + esc(o.label) + '</span>' +
+      (cap ? '<span class="m-cap">' + esc(cap) + '</span>' : '') + '</span><span class="dot"></span></span></label>';
+  });
+  $('methods').innerHTML = html;
+}
+
+function renderSummary() {
+  var tr = curTariff(), p = curPeriod(), opt = null;
+  options().forEach(function (o) { if (o.key === st.method) opt = o; });
+  $('s-tariff').textContent = tr ? niceName(tr.name) : '—';
+  $('s-period').textContent = p ? periodLabel(p.days, lang) : '—';
+  $('s-method').textContent = opt ? opt.label : '—';
+  var orig = p && p.original_price_kopeks && p.original_price_kopeks > p.price_kopeks ? '<s>' + rub(p.original_price_kopeks, lang) + '</s>' : '';
+  $('s-total').innerHTML = p ? orig + rub(p.price_kopeks, lang) : '—';
+  if (!busy) $('pay').textContent = p ? MSG[lang].payBtn.replace('{price}', rub(p.price_kopeks, lang)) : MSG[lang].payShort;
+  $('pb-name').textContent = tr && p ? niceName(tr.name) + ' · ' + periodLabel(p.days, lang) : '';
+  $('pb-price').textContent = p ? rub(p.price_kopeks, lang) : '';
+  updateBar();
+}
+
+function ensureSelection() {
+  var l = tariffs();
+  if (!curTariff()) st.tariff = l.length ? l[0].id : null;
+  var tr = curTariff();
+  if (tr && !curPeriod()) st.days = tr.periods[0].days;
+}
+function renderAll() {
+  ensureSelection();
+  applyStatic(); renderDerived(); renderTariffs(); renderPeriods(); renderMethods(); renderSummary(); renderDiscount();
+}
+
+/* ---------- discount banner (config.discount: {percent, badge_text, ends_at}) ---------- */
+var dTimer = null;
+function renderDiscount() {
+  var box = $('discount'), d = cfg.discount;
+  clearInterval(dTimer);
+  if (!d || !d.ends_at) { box.hidden = true; return; }
+  var end = new Date(d.ends_at).getTime();
+  function tick() {
+    var left = Math.max(0, end - Date.now());
+    if (!left) { clearInterval(dTimer); box.hidden = true; load(); return; }
+    var s = Math.floor(left / 1000), dd = Math.floor(s / 86400), hh = Math.floor(s % 86400 / 3600), mm = Math.floor(s % 3600 / 60), ss = s % 60;
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    box.querySelector('time').textContent = (dd ? dd + (lang === 'en' ? 'd ' : 'д ') : '') + pad(hh) + ':' + pad(mm) + ':' + pad(ss);
+  }
+  box.innerHTML = '<p><span class="pct">−' + esc(d.percent) + '%</span>' + esc(d.badge_text || '') + '</p><p>' + MSG[lang].discountEnds + ' <time></time></p>';
+  box.hidden = false; tick(); dTimer = setInterval(tick, 1000);
+}
+
+/* ---------- interactions ---------- */
+var form = $('buy'), contact = $('contact');
+contact.value = prefill;
+form.addEventListener('change', function (e) {
+  var el = e.target;
+  if (el.name === 'tariff') { st.tariff = Number(el.value); var tr = curTariff(); if (tr && !curPeriod()) st.days = tr.periods[0].days; renderPeriods(); renderMethods(); }
+  else if (el.name === 'period') { st.days = Number(el.value); renderMethods(); }
+  else if (el.name === 'method') { st.method = el.value; }
+  else if (el.name === 'buyfor') { setGift(el.value === 'gift'); }
+  renderSummary();
+});
+function setGift(on) { st.gift = on; $('gift-fields').hidden = !on; }
+
+function normContact(v) {
+  v = v.trim().replace(/^(https?:\/\/)?(www\.)?(t|telegram)\.me\//i, '@');
+  if (v && v.indexOf('@') === -1 && /^[A-Za-z][A-Za-z0-9_]{3,31}$/.test(v)) v = '@' + v;
+  return v;
+}
+function validContact(v) { return v.charAt(0) === '@' ? /^@[A-Za-z0-9_]{3,32}$/.test(v) : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+function check(input, errEl, emptyMsg) {
+  var v = normContact(input.value);
+  if (v !== input.value.trim()) input.value = v;
+  var msg = !v ? emptyMsg : validContact(v) ? '' : MSG[lang].contactBad;
+  input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+  errEl.textContent = msg; errEl.hidden = !msg;
+  return !msg;
+}
+contact.addEventListener('blur', function () { if (contact.value.trim()) check(contact, $('contact-err'), MSG[lang].contactEmpty); });
+contact.addEventListener('input', function () { if (contact.getAttribute('aria-invalid') === 'true' && validContact(normContact(contact.value))) check(contact, $('contact-err'), ''); });
+
+function apiError(body, fallback) {
+  var d = body && body.detail;
+  if (typeof d === 'string') return d;
+  if (Array.isArray(d) && d.length) return d.map(function (x) { var loc = (x.loc || []).filter(function (l) { return l !== 'body'; }).join('.'); return loc ? loc + ': ' + x.msg : (x.msg || ''); }).join('; ');
+  if (d && typeof d === 'object' && typeof d.message === 'string') return d.message;
+  return fallback;
+}
+function csrf() {
+  var m = doc.cookie.match(/(?:^| )csrf_token=([^;]+)/);
+  if (m) return m[1];
+  var a = new Uint8Array(32); (window.crypto || window.msCrypto).getRandomValues(a);
+  var t = Array.prototype.map.call(a, function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+  doc.cookie = 'csrf_token=' + t + '; path=/; SameSite=Strict; Secure';
+  return t;
+}
+function setErr(msg) { var e = $('pay-err'); e.textContent = msg || ''; e.hidden = !msg; }
+function setBusy(on) {
+  busy = on; var b = $('pay'); b.disabled = on; $('pb-btn').disabled = on;
+  if (on) b.textContent = MSG[lang].processing; else renderSummary();
+}
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  if (busy) return;
+  setErr('');
+  var tr = curTariff(), p = curPeriod();
+  var ok = check(contact, $('contact-err'), MSG[lang].contactEmpty);
+  var giftOk = !st.gift || check($('gift-to'), $('gift-err'), MSG[lang].giftEmpty);
+  if (!ok || !giftOk) { (ok ? $('gift-to') : contact).focus(); return; }
+  if (!tr || !p || !st.method) { setErr(MSG[lang].purchaseError); return; }
+  var v = contact.value.trim();
+  var body = { tariff_id: tr.id, period_days: p.days, contact_type: v.charAt(0) === '@' ? 'telegram' : 'email', contact_value: v,
+    payment_method: st.method, language: lang, is_gift: st.gift };
+  var ref = SS.get('landing_referrer'); if (ref) body.referrer = ref;
+  if (st.gift) { var g = $('gift-to').value.trim(); body.gift_recipient_type = g.charAt(0) === '@' ? 'telegram' : 'email'; body.gift_recipient_value = g; var gm = $('gift-msg').value.trim(); if (gm) body.gift_message = gm; }
+  var cid = LS.get('ym_client_id'); if (cid) body.yandex_cid = cid;
+  var sub = SS.get('landing_subid'); if (sub) body.subid = sub;
+  var camp = ttlGet('campaign_slug'); if (camp) body.campaign_slug = camp;
+  goal('purchase_click');
+  if (cfg.analytics_click_enabled && cfg.analytics_click_goal) goal(cfg.analytics_click_goal);
+  track('begin_checkout', { currency: 'RUB', value: p.price_kopeks / 100, items: [{ item_id: String(tr.id), item_name: niceName(tr.name), item_variant: p.days + 'd', price: p.price_kopeks / 100 }] });
+  setBusy(true);
+  var ctrl = window.AbortController ? new AbortController() : null, timer = ctrl && setTimeout(function () { ctrl.abort(); }, 30000);
+  fetch(API + '/cabinet/landing/' + SLUG + '/purchase', {
+    method: 'POST', credentials: 'same-origin', signal: ctrl ? ctrl.signal : undefined,
+    headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrf() }, body: JSON.stringify(body)
+  }).then(function (res) {
+    return res.json()['catch'](function () { return null; }).then(function (data) {
+      if (!res.ok || !data || !data.payment_url) throw { body: data };
+      LS.set('lp_contact_' + SLUG, v);
+      location.href = data.payment_url;
+      setTimeout(function () { setBusy(false); }, 5000);
+    });
+  })['catch'](function (err) {
+    setBusy(false);
+    setErr(err && 'body' in err ? apiError(err.body, MSG[lang].purchaseError) : MSG[lang].network);
+  }).then(function () { clearTimeout(timer); });
+});
+
+doc.querySelector('.lang').addEventListener('click', function (e) {
+  var b = e.target.closest ? e.target.closest('[data-lang]') : null;
+  if (!b || b.getAttribute('data-lang') === lang) return;
+  lang = b.getAttribute('data-lang'); LS.set('cabinet_language', lang);
+  renderAll(); load();
+});
+
+/* ---------- mobile pay bar ---------- */
+var bar = $('paybar'), pbBtn = $('pb-btn'), seen = { hero: true, pay: false, checkout: false };
+function updateBar() {
+  var on = !seen.hero && !seen.pay && tariffs().length > 0;
+  bar.classList.toggle('on', on); bar.setAttribute('aria-hidden', String(!on)); pbBtn.tabIndex = on ? 0 : -1;
+  pbBtn.textContent = seen.checkout ? MSG[lang].payShort : MSG[lang].toPay;
+}
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (en) { seen[en.target.getAttribute('data-pb')] = en.isIntersecting; });
+    updateBar();
+  });
+  [['hero', $('hero-cta')], ['pay', $('pay')], ['checkout', form]].forEach(function (x) { x[1].setAttribute('data-pb', x[0]); io.observe(x[1]); });
+  pbBtn.addEventListener('click', function () {
+    if (seen.checkout && validContact(normContact(contact.value))) { if (form.requestSubmit) form.requestSubmit(); else $('pay').click(); }
+    else if (seen.checkout) { contact.focus(); check(contact, $('contact-err'), MSG[lang].contactEmpty); }
+    else $('checkout').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  var rio = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); rio.unobserve(en.target); } }); }, { rootMargin: '0px 0px -60px 0px' });
+  var rv = doc.querySelectorAll('.rv');
+  for (var i = 0; i < rv.length; i++) { if (rv[i].getBoundingClientRect().top < innerHeight) rv[i].classList.add('in'); else rio.observe(rv[i]); }
+} else {
+  var rv2 = doc.querySelectorAll('.rv');
+  for (var k = 0; k < rv2.length; k++) rv2[k].classList.add('in');
+}
+
+/* ---------- analytics (deferred; queue works before the scripts load) ---------- */
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+gtag('js', new Date()); gtag('config', GA_ID);
+function track(name, p) { try { gtag('event', name, p || {}); } catch (e) {} }
+function goal(name) {
+  track(name);
+  try { var id = LS.get('ym_counter_id'); if (typeof window.ym === 'function' && /^\d{1,15}$/.test(id)) window.ym(Number(id), 'reachGoal', name); } catch (e) {}
+}
+function addScript(src, id) { if (id && $(id)) return; var s = doc.createElement('script'); s.async = true; s.src = src; if (id) s.id = id; doc.head.appendChild(s); }
+function loadAnalytics() {
+  if (loadAnalytics.done) return; loadAnalytics.done = 1;
+  addScript('https://www.googletagmanager.com/gtag/js?id=' + GA_ID, 'gtag-loader');
+  fetch(API + '/cabinet/branding/analytics', { credentials: 'omit' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (a) {
+    if (!a) return;
+    if (/^\d{1,15}$/.test(a.yandex_metrika_id || '')) {
+      var id = Number(a.yandex_metrika_id); LS.set('ym_counter_id', String(id));
+      window.ym = window.ym || function () { (window.ym.a = window.ym.a || []).push(arguments); }; window.ym.l = +new Date();
+      addScript('https://mc.yandex.ru/metrika/tag.js', 'ym-counter-script');
+      window.ym(id, 'init', { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true });
+      setTimeout(function () { try { window.ym(id, 'getClientID', function (c) { if (c) LS.set('ym_client_id', c); }); } catch (e) {} }, 2000);
+      if (cfg.analytics_view_enabled && cfg.analytics_view_goal) window.ym(id, 'reachGoal', cfg.analytics_view_goal);
+    }
+    if (/^[A-Za-z0-9_-]{1,30}$/.test(a.google_ads_id || '')) gtag('config', a.google_ads_id);
+  })['catch'](function () {});
+}
+if (cfg.analytics_view_enabled && cfg.analytics_view_goal) track(cfg.analytics_view_goal);
+function idle(fn) { (window.requestIdleCallback || function (f) { setTimeout(f, 1500); })(fn, { timeout: 4000 }); }
+if (doc.readyState === 'complete') idle(loadAnalytics); else window.addEventListener('load', function () { idle(loadAnalytics); });
+['pointerdown', 'keydown', 'scroll'].forEach(function (ev) { window.addEventListener(ev, loadAnalytics, { once: true, passive: true }); });
+
+/* ---------- boot: render snapshot now, then refresh from the API ---------- */
+function load() {
+  var l = lang;
+  fetch(API + '/cabinet/landing/' + SLUG + '?lang=' + l, { credentials: 'same-origin' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (fresh) {
+      if (!fresh || !fresh.tariffs || l !== lang) return;
+      delete fresh.footer_text; delete fresh.custom_css;
+      if (JSON.stringify(fresh) === JSON.stringify(cfg)) return;
+      var a = doc.activeElement, keep = a && a.name && form.contains(a) ? '[name="' + a.name + '"][value="' + a.value + '"]' : null;
+      cfg = fresh; renderAll();
+      if (keep) { var f = form.querySelector(keep); if (f) f.focus(); }
+    })['catch'](function () {});
+}
+renderAll();
+load();
+})();
+</script>
+</body>
+</html>

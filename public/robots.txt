@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /buy/landing
+Allow: /privacy
+Allow: /offer
+Allow: /lp/
+Disallow: /admin
+Disallow: /api/
+Disallow: /buy/success/
+Disallow: /buy/gift/
+Disallow: /auth/
+Disallow: /auto-login
+Disallow: /merge/
+Disallow: /coupon/
+Disallow: /reset-password
+Disallow: /verify-email
+
+Sitemap: https://www.durdenvpn.org/sitemap.xml
