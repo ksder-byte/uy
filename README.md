@@ -12,17 +12,15 @@
 
 Нужны root-доступ к серверу, где запущен кабинет (или будет запущен), Docker и bash 4.4+.
 
-1. **Скачайте `install.sh`.** Репозиторий приватный, поэтому есть два способа:
-   - на GitHub откройте файл [`install.sh`](install.sh) → кнопка **Download raw file**, затем загрузите его на сервер, например `scp install.sh root@ваш-сервер:/root/`;
-   - или прямо на сервере, с [GitHub-токеном](https://github.com/settings/personal-access-tokens) (fine-grained, доступ *Contents: Read* к этому репозиторию):
-     ```bash
-     curl -fsSL -H "Authorization: Bearer ВАШ_ТОКЕН" -H "Accept: application/vnd.github.raw" \
-       https://api.github.com/repos/ksder-byte/uy/contents/install.sh -o install.sh
-     ```
-2. **Запустите:**
+1. **Скачайте и запустите** на сервере:
    ```bash
-   sudo bash install.sh
+   curl -fsSL https://raw.githubusercontent.com/ksder-byte/uy/HEAD/install.sh -o install.sh && sudo bash install.sh
    ```
+2. **Если сайт раздаёт nginx самого сервера из папки** (`root /srv/cabinet` — копия сборки), `install.sh` в конце так и скажет. Переключите сайт на контейнер:
+   ```bash
+   sudo bash /opt/durden-cabinet/install.sh nginx
+   ```
+   Команда делает резервную копию конфига и меняет только блок `server` вашего домена: `location /` начинает вести в контейнер, а статическая отдача старых JS/CSS из папки убирается. `/api/` и вебхуки остаются как были. Ваши файлы из папки (верификации, `.well-known`) продолжают отдаваться. После `nginx -t` и перезагрузки команда проверяет сайт. Если он не открылся, конфиг возвращается сам.
 
 Что сделает скрипт:
 1. Найдёт контейнер кабинета (`ghcr.io/bedolaga-dev/bedolaga-cabinet` или `cabinet_frontend`). Если его нет — поставит новый в сеть бота на `127.0.0.1:3020`.
@@ -40,6 +38,7 @@
 sudo bash /opt/durden-cabinet/install.sh status      # всё ли работает
 sudo bash /opt/durden-cabinet/install.sh update      # обновить кабинет до свежего образа
 sudo bash /opt/durden-cabinet/install.sh uninstall   # вернуть стандартный кабинет
+sudo bash /opt/durden-cabinet/install.sh nginx       # сайт раздаёт nginx из папки → переключить на контейнер
 ```
 
 Необязательные настройки задаются переменными перед командой, например `CONTAINER=my_cabinet sudo -E bash install.sh`:
@@ -71,6 +70,7 @@ nginx/                       конфиг для внешнего nginx — ес
 scripts/update-snapshot.mjs  обновляет цены и тексты, «запечённые» в HTML, из API кабинета
 tests/landing.test.mjs       e2e-тесты страницы (Playwright) против мок-API
 tests/installer.test.sh      проверка install.sh на имитации сервера в Docker
+tests/nginx-switch.test.sh   проверка «install.sh nginx» на копии конфига сервера
 docs/                        скриншоты до/после
 ```
 
@@ -104,5 +104,6 @@ docs/                        скриншоты до/после
 ```bash
 npm install && npx playwright install chromium
 npm test                  # страница
-sudo bash tests/installer.test.sh   # установщик (нужен Docker)
+sudo bash tests/installer.test.sh     # установщик (нужен Docker)
+sudo bash tests/nginx-switch.test.sh  # переключение nginx (Docker, nginx, свободные 80/443)
 ```

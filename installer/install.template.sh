@@ -20,6 +20,8 @@
 #    bash install.sh update      обновить кабинет до свежего образа
 #    bash install.sh status      проверить, что всё работает
 #    bash install.sh uninstall   вернуть стандартный кабинет без изменений
+#    bash install.sh nginx       если сайт раздаёт nginx этого сервера из папки
+#                                (root /srv/cabinet) — переключить его на контейнер
 #
 #  Необязательные настройки (переменные окружения):
 #    CONTAINER=cabinet_frontend  имя контейнера кабинета, если автопоиск ошибся
@@ -486,13 +488,16 @@ smoke() {  # $1 контейнер, $2 managed|stock
 check_public() {
   command -v curl >/dev/null || return 0
   local h
-  h=$(curl -sS -m 10 -o /dev/null -D - "$PUBLIC_URL/buy/landing" 2>/dev/null | tr '[:upper:]' '[:lower:]' || true)
+  h=$(curl -sSk -m 10 -o /dev/null -D - "$PUBLIC_URL/buy/landing" 2>/dev/null | tr '[:upper:]' '[:lower:]' || true)
   if [[ -z $h ]]; then
     warn "Не смог открыть $PUBLIC_URL с этого сервера — проверьте сайт в браузере."
   elif [[ $h == *frame-ancestors* ]]; then
     ok "$PUBLIC_URL/buy/landing отдаёт новый лендинг через ваш прокси."
   else
     warn "$PUBLIC_URL/buy/landing отдаёт не этот контейнер. Внешний прокси должен вести «/» в контейнер кабинета."
+    if command -v nginx >/dev/null 2>&1; then
+      warn "Если сайт раздаёт nginx этого сервера из папки (root …), переключите его: bash $APP_DIR/install.sh nginx"
+    fi
   fi
 }
 
@@ -624,6 +629,151 @@ cmd_install() {  # $1 = update → скачать свежий образ
     "  Убрать изменения:  bash $APP_DIR/install.sh uninstall"
 }
 
+# Сайт часто раздаёт nginx самого сервера из папки (root /srv/cabinet: копия
+# сборки), а контейнер стоит рядом без дела. Переключаем server-блок домена на
+# контейнер: location / → 127.0.0.1:<порт>; статические regex-локации, которые
+# отдавали бы старые JS/CSS из папки, убираем; /api/ и вебхуки не трогаем.
+ngx() { if [[ -n ${NGINX_MAIN_CONF:-} ]]; then nginx -c "$NGINX_MAIN_CONF" "$@"; else nginx "$@"; fi; }
+ngx_reload() {
+  if [[ -z ${NGINX_MAIN_CONF:-} ]] && systemctl reload nginx 2>/dev/null; then return 0; fi
+  ngx -s reload
+}
+
+cmd_nginx() {
+  preflight
+  command -v nginx >/dev/null || die 'nginx на этом сервере не найден.'
+  command -v python3 >/dev/null || die 'Нужен python3 (apt install python3).'
+  command -v curl >/dev/null || die 'Нужен curl (apt install curl).'
+  local cur port conf bak scheme url out
+  cur=$(find_cabinet)
+  if [[ -z $cur ]] || ! is_ours "$cur"; then die 'Сначала установите кабинет: bash install.sh'; fi
+  port=$(docker port "$cur" 80/tcp 2>/dev/null | awk -F: 'NR == 1 {print $NF}' || true)
+  [[ -n $port ]] || die "У контейнера $cur нет порта на хосте, nginx не сможет к нему обратиться."
+  conf=$(ngx -T 2>/dev/null | awk -v d="$DOMAIN" '/^# configuration file /{f=$4; sub(/:$/, "", f)} $1 == "server_name" && index($0, d) {print f}' | sort -u || true)
+  [[ -n $conf && $(grep -c . <<<"$conf") -eq 1 ]] || die "Не нашёл конфиг nginx с server_name $DOMAIN (нашлось: ${conf:-ничего})."
+  conf=$(readlink -f "$conf")
+  say "Переключаю $DOMAIN в $conf на контейнер $cur (127.0.0.1:$port)"
+
+  bak="$APP_DIR/backup/nginx-$(basename "$conf")-$(date +%Y%m%d-%H%M%S)"
+  mkdir -p "$APP_DIR/backup"
+  cp -- "$conf" "$bak"
+  ok "Копия конфига: $bak"
+  out=$(python3 - "$conf" "$DOMAIN" "$port" <<'PY'
+import os, re, sys
+
+path, domain, port = sys.argv[1], sys.argv[2], sys.argv[3]
+src = open(path, encoding='utf-8').read()
+
+
+def blocks(text):
+    # Границы server { ... } с учётом комментариев и кавычек.
+    for m in re.finditer(r'(?m)^[ \t]*server\s*\{', text):
+        depth, quote, comment = 0, None, False
+        for j in range(m.end() - 1, len(text)):
+            c = text[j]
+            if comment:
+                comment = c != '\n'
+            elif quote:
+                quote = None if c == quote else quote
+            elif c == '#':
+                comment = True
+            elif c in '"\'':
+                quote = c
+            elif c == '{':
+                depth += 1
+            elif c == '}':
+                depth -= 1
+                if depth == 0:
+                    yield m.start(), j + 1
+                    break
+
+
+STATIC = re.compile(r'(?m)^([ \t]*)location\s+/\s*\{\s*try_files\s+\$uri\s+(?:\$uri/\s+)?/index\.html\s*;\s*\}[ \t]*\n?')
+REGEX_LOC = re.compile(r'(?m)^[ \t]*location\s+~\*?\s+[^{]*\{[^{}]*\}[ \t]*\n?')
+targets = [(a, b) for a, b in blocks(src)
+           if re.search(r'(?m)^\s*server_name\s[^;]*' + re.escape(domain), src[a:b]) and STATIC.search(src[a:b])]
+if len(targets) != 1:
+    sys.exit('Не нашёл в конфиге блок server для %s с «location / { try_files $uri /index.html; }» — '
+             'возможно, nginx уже переключён или настроен иначе.' % domain)
+a, b = targets[0]
+block = src[a:b]
+root = re.search(r'(?m)^\s*root\s+([^;]+);', block)
+root = root.group(1).strip() if root else ''
+api = re.search(r'location\s+\^?~?\s*/api/\s*\{[^}]*?proxy_pass\s+(https?://[^/;\s]+)', block)
+indent = STATIC.search(block).group(1) or '    '
+inner = indent + '    '
+lines = [indent + '# install.sh: сайт отдаёт контейнер кабинета (лендинг, сжатие, кеш, заголовки).']
+if api and not re.search(r'location\s*=\s*/health/unified', block):
+    lines += [indent + 'location = /health/unified {', inner + 'proxy_pass %s/health/unified;' % api.group(1),
+              inner + 'proxy_set_header Host $host;', indent + '}']
+kept, skipped = [], []
+if root and os.path.isdir(root):
+    # Свои файлы, положенные в папку рядом со сборкой (верификации и т. п.), отдаём как раньше.
+    for name in sorted(os.listdir(root)):
+        full = os.path.join(root, name)
+        if name in ('index.html', '50x.html', 'assets', 'fonts', 'miniapp'):
+            continue
+        if name == '.well-known' and os.path.isdir(full):
+            lines += [indent + 'location ^~ /.well-known/ { root %s; }' % root]
+            kept.append(name + '/')
+        elif os.path.isfile(full) and re.fullmatch(r'[A-Za-z0-9._-]+', name):
+            lines += [indent + 'location = /%s { root %s; }' % (name, root)]
+            kept.append(name)
+        else:
+            skipped.append(name)
+lines += [indent + 'location / {', inner + 'proxy_pass http://127.0.0.1:%s;' % port,
+          inner + 'proxy_set_header Host $host;', inner + 'proxy_set_header X-Real-IP $remote_addr;',
+          inner + 'proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;',
+          inner + 'proxy_set_header X-Forwarded-Proto $scheme;', indent + '}']
+new_block = STATIC.sub(lambda m: '\n'.join(lines) + '\n', block, count=1)
+# Убираем только regex-локации, которые отдают файлы из папки (иначе старые JS/CSS
+# перекрывали бы контейнер); с proxy_pass/fastcgi_pass/return/deny/rewrite — не трогаем.
+KEEP = re.compile(r'_pass\b|\breturn\b|\bdeny\b|\brewrite\b')
+removed = [m.group(0).strip().split('{')[0].strip() for m in REGEX_LOC.finditer(new_block) if not KEEP.search(m.group(0))]
+new_block = REGEX_LOC.sub(lambda m: m.group(0) if KEEP.search(m.group(0)) else '', new_block)
+with open(path, 'w', encoding='utf-8') as f:
+    f.write(src[:a] + new_block + src[b:])
+print('scheme=' + ('https' if re.search(r'listen\s+[^;]*(443|ssl)', block) else 'http'))
+for r in removed:
+    print('removed=' + r)
+for k in kept:
+    print('kept=' + k)
+for k in skipped:
+    print('skipped=' + k)
+PY
+  ) || { cat -- "$bak" >"$conf"; die "${out:-Не удалось изменить конфиг.}"; }
+  scheme=$(sed -n 's/^scheme=//p' <<<"$out")
+  while IFS= read -r line; do
+    case $line in
+      removed=*) ok "Убрал статическую отдачу из папки: ${line#removed=}" ;;
+      kept=*) ok "Ваш файл ${line#kept=} по-прежнему отдаётся из папки" ;;
+      skipped=*) warn "В папке есть ${line#skipped=} — его больше не будет видно с сайта" ;;
+    esac
+  done <<<"$out"
+
+  if ! out=$(ngx -t 2>&1); then
+    cat -- "$bak" >"$conf"
+    die "nginx -t не прошёл, конфиг возвращён:\n$out"
+  fi
+  ngx_reload
+  sleep 2
+  url="$scheme://$DOMAIN"
+  local -a c=(curl -sk -m 15 --noproxy '*' --resolve "$DOMAIN:443:127.0.0.1" --resolve "$DOMAIN:80:127.0.0.1")
+  local landing asset
+  landing=$("${c[@]}" "$url/buy/landing" || true)
+  asset=$("${c[@]}" "$url/login" | grep -o '/assets/[^"]*\.js' | head -n1 || true)
+  if [[ $landing == *'id="lp-data"'* && -n $asset ]] && "${c[@]}" -f -o /dev/null "$url$asset"; then
+    ok "$url/buy/landing — быстрый лендинг, кабинет и его файлы открываются."
+  else
+    cat -- "$bak" >"$conf"
+    ngx_reload
+    die "После переключения сайт не открылся — конфиг nginx возвращён как был ($bak)."
+  fi
+  check_public
+  say 'Готово'
+  printf '%s\n' "  Вернуть прежний конфиг nginx:  cp $bak $conf && systemctl reload nginx"
+}
+
 cmd_status() {
   [[ $EUID -eq 0 ]] || die 'Запустите от root: sudo bash install.sh status'
   local cur
@@ -665,8 +815,9 @@ main() {
     update) cmd_install update ;;
     status) cmd_status ;;
     uninstall | remove) cmd_uninstall ;;
-    -h | --help | help) sed -n '2,32p' "${BASH_SOURCE[0]}" 2>/dev/null || echo 'Команды: install | update | status | uninstall' ;;
-    *) die "Неизвестная команда «$1». Команды: install | update | status | uninstall" ;;
+    nginx) cmd_nginx ;;
+    -h | --help | help) sed -n '2,34p' "${BASH_SOURCE[0]}" 2>/dev/null || echo 'Команды: install | update | status | nginx | uninstall' ;;
+    *) die "Неизвестная команда «$1». Команды: install | update | status | nginx | uninstall" ;;
   esac
 }
 
