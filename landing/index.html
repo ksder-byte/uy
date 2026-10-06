@@ -27,7 +27,12 @@
 <!--lp:verification-->
 
 <!--/lp:verification-->
+<script>
+try{var l=(localStorage.getItem('cabinet_language')||navigator.language||'ru').slice(0,2).toLowerCase();if(l==='en')document.documentElement.className+=' lp-en';}catch(e){}
+</script>
 <style>
+.lp-en:not(.lp-ready) body{visibility:hidden;animation:lp-show 0s 2s forwards}
+@keyframes lp-show{to{visibility:visible}}
 :root{--bg:#1c1c1c;--tile:#0d0d0d;--surface:#121212;--surface-2:#1a1a1a;--surface-3:#262626;--line:#2b2b2b;--line-2:#3d3d3d;--text:#f5f5f5;--muted:#b0b0b0;--dim:#8f8f8f;--accent:#fff;--on-accent:#0b0b0b;--danger:#ff7b7b;--ok:#45c96b;--red:#e01b1b;--radius:4px;--wrap:1120px;--font:Roboto,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,system-ui,sans-serif;color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -935,9 +940,12 @@ function loadAnalytics() {
   })['catch'](function () {});
 }
 if (cfg.analytics_view_enabled && cfg.analytics_view_goal) track(cfg.analytics_view_goal);
-function idle(fn) { (window.requestIdleCallback || function (f) { setTimeout(f, 1500); })(fn, { timeout: 4000 }); }
-if (doc.readyState === 'complete') idle(loadAnalytics); else window.addEventListener('load', function () { idle(loadAnalytics); });
-['pointerdown', 'keydown', 'scroll'].forEach(function (ev) { window.addEventListener(ev, loadAnalytics, { once: true, passive: true }); });
+// gtag.js весит ~200 КБ и занимает главный поток на ~0,6 с на среднем телефоне,
+// поэтому грузится при первом действии посетителя или через 5 с после загрузки.
+// События до этого копятся в dataLayer и уходят, когда скрипт загрузится.
+function later() { setTimeout(loadAnalytics, 5000); }
+if (doc.readyState === 'complete') later(); else window.addEventListener('load', later);
+['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (ev) { window.addEventListener(ev, loadAnalytics, { once: true, passive: true }); });
 
 /* ---------- boot: render snapshot now, then refresh from the API ---------- */
 function load() {
@@ -954,6 +962,7 @@ function load() {
     })['catch'](function () {});
 }
 renderAll();
+root.className += ' lp-ready';
 load();
 })();
 </script>
