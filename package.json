@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "test": "node tests/landing.test.mjs",
-    "snapshot": "node scripts/update-snapshot.mjs"
+    "test:installer": "bash tests/installer.test.sh",
+    "snapshot": "node scripts/update-snapshot.mjs",
+    "build:installer": "bash scripts/build-installer.sh"
   },
   "devDependencies": {
     "playwright": "^1.56.1"
