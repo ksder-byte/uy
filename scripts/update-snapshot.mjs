@@ -107,7 +107,7 @@ const ld = {
       name: 'DurdenVPN',
       url: 'https://www.durdenvpn.org/',
       logo: 'https://www.durdenvpn.org/lp/logo-256.webp',
-      sameAs: ['https://t.me/durdenvpn'],
+      sameAs: ['https://t.me/durden_vpn'],
       contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer support', url: 'https://t.me/durdenvpn_support', email: 'support@durdenvpn.org' }],
     },
     {

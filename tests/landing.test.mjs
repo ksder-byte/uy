@@ -196,6 +196,7 @@ await test('accessibility basics: zoom allowed, labelled controls, one h1, lang 
   assert.deepEqual(unlabeled, []);
   const imgsWithoutAlt = await page.$$eval('img', (els) => els.filter((e) => !e.hasAttribute('alt')).length);
   assert.equal(imgsWithoutAlt, 0);
+  assert.equal(await page.getAttribute('[data-i18n="footChannel"]', 'href'), 'https://t.me/durden_vpn');
   await ctx.close();
 });
 
