@@ -206,6 +206,8 @@ sleep 1
 docker pause cabinet_frontend >/dev/null
 if run nginx >"$T/nginx3.log" 2>&1; then bad 'переключение на недоступный контейнер не упало'; else ok 'переключение остановлено'; fi
 docker unpause cabinet_frontend >/dev/null
+# После reload старые воркеры nginx ещё долю секунды отвечают по прежнему конфигу.
+for _ in $(seq 1 10); do [[ $(body /buy/landing) == *"id=\"root\""* ]] && break; sleep 1; done
 check 'конфиг вернулся к исходному' '[[ $(sha256sum "$N/sites-enabled/default" | cut -d" " -f1) == "$ORIG_SUM" ]]'
 check 'сайт работает как до переключения' '[[ $(body /buy/landing) == *"id=\"root\""* ]]'
 

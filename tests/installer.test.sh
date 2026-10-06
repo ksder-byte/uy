@@ -107,6 +107,8 @@ check 'у бандла один Cache-Control: immutable' '[[ $(hdrs "$ASSET" | 
 check 'кабинет: index.html no-cache' '[[ $(hdrs /login) == *"no-cache, must-revalidate"* && $(body /login) == *"id=\"root\""* ]]'
 check 'HSTS и nosniff' '[[ $(hdrs /) == *strict-transport-security* && $(hdrs /) == *"x-content-type-options: nosniff"* ]]'
 check 'robots.txt, sitemap.xml, favicon.ico' '[[ $(body /robots.txt) == *Sitemap* && $(body /sitemap.xml) == *"<urlset"* && $(hdrs /favicon.ico) == *"200 ok"* ]]'
+check 'главная кабинета ссылается на иконки для поиска' '[[ $(body /login) == *"/lp/favicon-192.png"* && $(body /login) != *"href=\"/api/cabinet/branding/favicon\""* && $(hdrs /lp/favicon-192.png) == *"content-type: image/png"* ]]'
+check 'robots.txt разрешает иконку из /api/' '[[ $(body /robots.txt) == *"Allow: /api/cabinet/branding/favicon"* ]]'
 check 'картинки лендинга /lp/ отдаются с кешем' '[[ $(hdrs /lp/logo-128.webp) == *"content-type: image/webp"* && $(hdrs /lp/logo-128.webp) == *"max-age=2592000"* ]]'
 check 'несуществующий файл → 404' '[[ $(hdrs /assets/nope.js) == *" 404 "* ]]'
 check '/health/unified отвечает ботом' '[[ $(body /health/unified) == *"\"status\":\"ok\""* ]]'

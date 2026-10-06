@@ -389,10 +389,12 @@ server {
     }
 
     # Оболочка SPA всегда перепроверяется, иначе после обновления браузер
-    # тянул бы удалённые бандлы.
+    # тянул бы удалённые бандлы. Иконка кабинета (256 px из /api/) заменяется
+    # набором, который принимают Google (кратно 48 px) и Яндекс (120 px).
     location = /index.html {
 @H8@
         add_header Cache-Control "no-cache, must-revalidate" always;
+        sub_filter '<link rel="icon" href="/api/cabinet/branding/favicon" />' '<link rel="icon" href="/favicon.ico" sizes="48x48" /><link rel="icon" type="image/png" sizes="192x192" href="/lp/favicon-192.png" /><link rel="icon" type="image/png" sizes="120x120" href="/lp/favicon-120.png" /><link rel="apple-touch-icon" href="/lp/apple-touch-icon.png" />';
     }
 @HEALTH@
     # Несуществующие файлы — настоящий 404, а не index.html с кодом 200.

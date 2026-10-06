@@ -3,6 +3,9 @@ Allow: /buy/landing
 Allow: /privacy
 Allow: /offer
 Allow: /lp/
+# Иконка и логотип отдаются ботом из /api/ — поисковикам их видеть нужно.
+Allow: /api/cabinet/branding/favicon
+Allow: /api/cabinet/branding/logo
 Disallow: /admin
 Disallow: /api/
 Disallow: /buy/success/

@@ -197,6 +197,10 @@ await test('accessibility basics: zoom allowed, labelled controls, one h1, lang 
   const imgsWithoutAlt = await page.$$eval('img', (els) => els.filter((e) => !e.hasAttribute('alt')).length);
   assert.equal(imgsWithoutAlt, 0);
   assert.equal(await page.getAttribute('[data-i18n="footChannel"]', 'href'), 'https://t.me/durden_vpn');
+  for (const href of ['/lp/favicon-192.png', '/lp/favicon-120.png']) {
+    const res = await page.request.get(BASE + href);
+    assert.equal(res.headers()['content-type'], 'image/png', href);
+  }
   await ctx.close();
 });
 
